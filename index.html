@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="img/cerosoft-mark.webp">
+<title>Patcharadanai Sombatsatien</title>
+<meta name="description" content="Portfolio of Patcharadanai Sombatsatien (Cheer): AI, computer vision and embedded systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+Thai:wght@400;500;600&family=Cormorant+Garamond:wght@400&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Patcharadanai <span>S.</span></a>
+    <div class="nav-links">
+      <a href="#cerosoft">CeroSoft</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme">Day</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="eyebrow">AI · Computer vision · Embedded systems</div>
+      <h1>Patcharadanai Sombatsatien<span class="nick">Cheer · 陈寅甲</span></h1>
+      <p class="lede">I build software where models meet hardware: deep learning for image segmentation, control software for telescope instruments, and test automation for RF production lines.</p>
+      <div class="focus">
+        <span class="tag">Python</span><span class="tag">C++</span><span class="tag">VHDL</span>
+        <span class="tag">Deep learning</span><span class="tag">Computer vision</span><span class="tag">PyVISA instrument control</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-line" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="portrait-col">
+      <div class="orbit" aria-hidden="true"></div>
+      <div class="portrait"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="607" height="700"></div>
+      <div class="coords">Founder · CeroSoft<br>M.Sc. candidate · Xi'an Jiaotong University<br>Former engineer · NARIT and Hana × Keysight</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>3 yrs 5 mos</b><span>Industry and research experience</span></div>
+    <div class="stat" role="listitem"><b>5</b><span>Co-authored publications</span></div>
+    <div class="stat" role="listitem"><b>3.73</b><span>GPA, M.Sc. Computer Science</span></div>
+    <div class="stat" role="listitem"><b>3.78</b><span>GPA, B.Eng. Electrical Engineering</span></div>
+  </div>
+</div>
+
+<main>
+<section id="cerosoft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Now</div>
+      <h2>Building <em>CeroSoft</em></h2>
+      <p>A software studio I founded to turn messy, manual workflows into simple systems that small businesses can actually run.</p>
+    </div>
+    <article class="venture on-stage">
+      <div class="venture-text">
+        <div class="venture-id">
+          <img src="img/cerosoft-mark.webp" alt="CeroSoft logo" width="52" height="52">
+          <div><h3>CeroSoft</h3><a href="https://cerosoft.net" target="_blank" rel="noopener">cerosoft.net</a></div>
+        </div>
+        <p>From zero to solution. CeroSoft starts from the business problem, not the technology, and builds software for SMEs, condominiums and local service businesses that still run on Excel, chat groups and paper.</p>
+        <div class="focus">
+          <span class="tag">Custom software</span><span class="tag">Business automation</span><span class="tag">Web solutions</span><span class="tag">System integration</span><span class="tag">Support and maintenance</span>
+        </div>
+        <div class="product">
+          <div class="meta">Flagship product · live at Punna Residence 5</div>
+          <h4>CondoMate: condominium management system</h4>
+          <p>One system for residents and the management office: repair requests, parcel tracking, shared-space booking, announcements, finance and reports.</p>
+          <ul class="role">
+            <li>Node.js server and API with sign-in, role-based access and file uploads</li>
+            <li>Two deployment modes: SQLite on-premises or PostgreSQL online on Vercel</li>
+            <li>Installable web app for residents, with barcode scanning for parcels</li>
+            <li>Backup and restore tooling, plus Playwright end-to-end tests</li>
+          </ul>
+        </div>
+        <div class="product">
+          <h4>Company website</h4>
+          <ul class="role">
+            <li>Bilingual Thai/English site built with React 19, TypeScript and Vite</li>
+            <li>Hosted on Vercel with Cloudflare DNS; contact form sent through a serverless function and Resend</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="screens">
+        <img class="desk" src="img/condo-console.webp" alt="CondoMate management console showing the building overview" loading="lazy">
+        <img class="phone" src="img/condo-access.webp" alt="CondoMate sign-in choice between resident and management" loading="lazy">
+        <img class="phone" src="img/condo-resident.webp" alt="CondoMate resident home screen" loading="lazy">
+        <figcaption>CondoMate management console and resident app (Punna Residence 5)</figcaption>
+      </figure>
+    </article>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Selected work</div>
+      <h2>Projects</h2>
+      <p>From a master's thesis in open-vocabulary segmentation to instrument software at the National Astronomical Research Institute of Thailand.</p>
+    </div>
+
+    <article class="feature">
+      <div>
+        <div class="eyebrow">Master's thesis · Xi'an Jiaotong University · 2024–2026</div>
+        <h3>Training-free domain adaptation via LoRA fusion</h3>
+        <p>Parameter-Efficient Training-Free Domain Adaptation via LoRA Fusion for Open-Vocabulary Segmentation. Combines heterogeneous pre-training, parameter-efficient adaptation and similarity-driven adapter composition to keep zero-shot generalisation while improving cross-domain stability and computational efficiency.</p>
+        <ol class="pipeline">
+          <li><span class="n">1</span><div><b>Similarity-guided LoRA selection</b><span>Pick the adapters closest to the input domain</span></div></li>
+          <li><span class="n">2</span><div><b>Dynamic fusion</b><span>Weight and merge them at inference time</span></div></li>
+          <li><span class="n">3</span><div><b>Segmentation output</b><span>Open-vocabulary masks with no extra training</span></div></li>
+        </ol>
+      </div>
+      <div class="results">
+        <img src="img/thesis-a.webp" alt="Segmentation results on an urban street scene" width="1400" height="333" loading="lazy">
+        <img src="img/thesis-b.webp" alt="Segmentation results on a tree-lined road scene" width="1400" height="331" loading="lazy">
+        <div class="results-key"><span>RGB</span><span>Ground truth</span><span>Zero-shot</span><span>Proposed</span></div>
+      </div>
+    </article>
+
+    <div class="grid">
+      <article class="card">
+        <div class="media split">
+          <img src="img/fpm-bench.webp" alt="Optical bench with nano-piezo actuator" loading="lazy">
+          <img class="fit" src="img/fpm-gui.webp" alt="Motion control software window" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="meta">NARIT · EvWaCo · 2023–2024</div>
+          <h3>Focal-plane mask control</h3>
+          <p>For the Evanescent Wave Coronagraph: linking nano-piezo actuator position to the measured FWHM of the focal-plane mask.</p>
+          <ul class="role">
+            <li>Control software for the actuator: COM-port selection, motion control, saved configurations</li>
+            <li>Live FWHM measurement tied to actuator position</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media split">
+          <img src="img/ao-dm.webp" alt="Deformable mirror surface model" loading="lazy">
+          <img class="fit" src="img/ao-loop.webp" alt="Closed-loop control diagram with wavefront sensor, deformable mirror and leaky integrator" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="meta">NARIT · EvWaCo · 2023–2024</div>
+          <h3>Adaptive-optics closed loop</h3>
+          <p>Calibration and characterisation of the TAO adaptive-optics system, then closed-loop experiments.</p>
+          <ul class="role">
+            <li>Shack–Hartmann wavefront sensor and deformable mirror calibration</li>
+            <li>Interaction-matrix measurement and leaky-integrator control loop</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media split">
+          <img src="img/lidar-night.webp" alt="LiDAR station firing a green laser at night" loading="lazy" style="object-position: center 70%">
+          <img src="img/lidar-dashboard.webp" alt="Atmospheric LiDAR web dashboard" loading="lazy" style="object-position: top">
+        </div>
+        <div class="card-body">
+          <div class="meta">NARIT · 2023–2024</div>
+          <h3>Atmospheric LiDAR and dashboard</h3>
+          <p>A Mie-scattering LiDAR for observing atmospheric aerosols, with a web dashboard for instrument status and processed profiles.</p>
+          <ul class="role">
+            <li>Range-correction data processing</li>
+            <li>Laser power control</li>
+            <li>Dashboard showing live readings and LiDAR profiles</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media split">
+          <img class="fit" src="img/spectrograph.webp" alt="UV-to-visible spectrograph project poster" loading="lazy">
+          <img class="fit" src="img/spectro-correct.webp" alt="Solar spectrum before and after distortion correction" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="meta">NARIT · 2023–2024</div>
+          <h3>UV-to-visible spectrograph</h3>
+          <p>A Czerny–Turner spectrograph covering 350–700 nm at R = 500–3500, prototyped in 3D-printed PLA and nylon.</p>
+          <ul class="role">
+            <li>Data-cube visualisation</li>
+            <li>Distortion correction to reveal solar features</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card wide">
+        <div class="card-body">
+          <div class="meta">Hana Microelectronics × Keysight Technologies · 2021–2023</div>
+          <h3>Four test-line automation projects</h3>
+          <p>Each one replaced a manual step on the RF production line with a small program.</p>
+        </div>
+        <div class="auto">
+          <figure><div class="pic"><img src="img/hana-station.webp" alt="Pie chart of station run, idle and setup time" loading="lazy"></div>
+            <figcaption><b>Weekly test-station update</b><span>Station utilisation sent to the team automatically through LINE Notify.</span></figcaption></figure>
+          <figure><div class="pic"><img src="img/hana-instrument.webp" alt="Diagram: instruments to program to database and e-mail" loading="lazy"></div>
+            <figcaption><b>Where is my instrument?</b><span>Polls test instruments, logs them to a database and sends e-mail alerts.</span></figcaption></figure>
+          <figure><div class="pic"><img src="img/hana-wip.webp" alt="Diagram: Orion server to program to Excel" loading="lazy"></div>
+            <figcaption><b>Orion automatic WIP</b><span>Work-in-progress data pulled from the Orion server into Excel.</span></figcaption></figure>
+          <figure><div class="pic"><img src="img/hana-spurious.webp" alt="Diagram: program controlling a spectrum analyser through PyVISA" loading="lazy"></div>
+            <figcaption><b>Semi-automatic spurious test</b><span>A manual spectrum-analyser test converted to Python and PyVISA.</span></figcaption></figure>
+        </div>
+        <div class="demo">
+          <video src="video/line-notify.mp4" poster="img/line-notify.webp" controls muted playsinline preload="none" aria-label="Phone recording of the weekly station update arriving in LINE"></video>
+          <div class="sub">
+            <div class="eyebrow">Demo</div>
+            <h4>The weekly update arriving in the team's LINE group</h4>
+            <p>Station status and equipment summaries are generated and pushed each week, so nobody compiles the report by hand.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          <video src="video/vehicle-counting.mp4" poster="img/vehicle.webp" controls muted playsinline preload="none" aria-label="Vehicle counting demo video"></video>
+        </div>
+        <div class="card-body">
+          <div class="meta">B.Eng. senior project · Chiang Mai University · 2020</div>
+          <h3>Vehicle counting at road intersections</h3>
+          <p>Counts the vehicles on each route through an intersection from video, giving the primary data for studying congestion and planning traffic management.</p>
+          <ul class="role">
+            <li>Image processing on intersection video</li>
+            <li>Vehicle detection, tracking and per-route counting</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media split">
+          <img src="img/dust-killer.webp" alt="Electric Dust Killer control board with TFT display" loading="lazy">
+          <img src="img/drainage.webp" alt="Drainage team at work" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="meta">Community engineering · Chiang Mai University</div>
+          <h3>Community engineering projects</h3>
+          <div class="sub">
+            <h4>Electric Dust Killer: software</h4>
+            <ul class="role">
+              <li>Microcontroller firmware for the control unit</li>
+              <li>Real-time readout of two PM2.5 sensors on a TFT display</li>
+              <li>Threshold logic that switches the dust-removal system on and off</li>
+            </ul>
+          </div>
+          <div class="sub">
+            <h4>Mae Chan flood monitoring</h4>
+            <ul class="role">
+              <li>Helped develop a web-based system to track flood conditions for the community in Mae Chan, Chiang Rai</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Experience</div>
+      <h2>Where I've worked</h2>
+    </div>
+    <ol class="timeline">
+      <li>
+        <div class="when"><b>Present</b>CeroSoft</div>
+        <div class="what">
+          <h3>Founder and Software Developer</h3>
+          <div class="org">CeroSoft · Bangkok, Thailand</div>
+          <p>Designing and building business software end to end, from requirements to deployment and support. Flagship product: CondoMate, a condominium management system in live use.</p>
+          <div class="focus"><span class="tag">Node.js</span><span class="tag">PostgreSQL · SQLite</span><span class="tag">React · TypeScript</span><span class="tag">Vercel</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when"><b>Feb 2023 – Aug 2024</b>1 yr 8 mos</div>
+        <div class="what">
+          <h3>Embedded Software Engineer</h3>
+          <div class="org">National Astronomical Research Institute of Thailand (NARIT) · Center for Optics and Photonics</div>
+          <p>Instrument control and data processing for astronomical and atmospheric instruments: the EvWaCo coronagraph's focal-plane mask and adaptive optics, an atmospheric LiDAR and a UV-to-visible spectrograph.</p>
+          <div class="focus"><span class="tag">Instrument control</span><span class="tag">Adaptive optics</span><span class="tag">Signal processing</span><span class="tag">Dashboards</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when"><b>May 2021 – Jan 2023</b>1 yr 9 mos</div>
+        <div class="what">
+          <h3>Electrical Test Engineer</h3>
+          <div class="org">Hana Microelectronics × Keysight Technologies · OP3 RF</div>
+          <p>Troubleshooting high-frequency motherboards, controlling the test production line and running yield-improvement projects, including four automation tools.</p>
+          <div class="focus"><span class="tag">RF test</span><span class="tag">Yield improvement</span><span class="tag">Python · PyVISA</span><span class="tag">Production cost reduction</span></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Research</div>
+      <h2>Publications</h2>
+      <p>Co-author on five papers from my work at NARIT.</p>
+    </div>
+    <ol class="pubs">
+      <li><div class="yr">2025</div><div><b>Detection of atmospheric aerosol layer using Mie LiDAR system</b><i>IEEJ Workshop Materials, DEI 2025</i></div></li>
+      <li><div class="yr">2024</div><div><b>Preliminary closed-loop performance of the adaptive optics for the Evanescent Wave Coronagraph prototype</b><i>Adaptive Optics Systems IX, Proc. SPIE 13097</i></div></li>
+      <li><div class="yr">2024</div><div><b>Completed optical design and performance analysis of the evanescent wave coronagraph prototype for the Thai National Telescope</b><i>Ground-based and Airborne Instrumentation for Astronomy X, Proc. SPIE 13096</i></div></li>
+      <li><div class="yr">2024</div><div><b>First results of the non-common path aberration correction in the Evanescent Wave Coronagraph testbed</b><i>Advances in Optical and Mechanical Technologies for Telescopes and Instrumentation, Proc. SPIE</i></div></li>
+      <li><div class="yr">2024</div><div><b>Optimization of flexible opto-mechanical mounts design in metallic mirror for space-based telescope using finite element analysis</b><i>Advances in Optical and Mechanical Technologies for Telescopes and Instrumentation, Proc. SPIE</i></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Education</div>
+      <h2>Study</h2>
+    </div>
+    <div class="edu">
+      <article class="card">
+        <div class="media"><img src="img/scholarship.webp" alt="Scholarship recipients group photo" loading="lazy"></div>
+        <div class="card-body">
+          <div class="meta">2024 – 2026 · expected July 2026</div>
+          <h3>M.Sc. Computer Science and Technology</h3>
+          <div class="org">Xi'an Jiaotong University</div>
+          <dl class="kv">
+            <dt>Focus</dt><dd>Artificial intelligence and computer vision</dd>
+            <dt>Key areas</dt><dd>Deep learning, parameter-efficient techniques</dd>
+            <dt>GPA</dt><dd>3.73</dd>
+          </dl>
+          <div class="callout"><b>Full scholarship</b> from the Information Technology Foundation under the Initiative of Her Royal Highness Princess Maha Chakri Sirindhorn.</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <div class="meta">2017 – 2021 · Telecommunications</div>
+          <h3>B.Eng. Electrical Engineering</h3>
+          <div class="org">Chiang Mai University</div>
+          <dl class="kv">
+            <dt>Foundation</dt><dd>Circuit theory, frequency modulation, digital signal processing</dd>
+            <dt>GPA</dt><dd>3.78</dd>
+          </dl>
+          <div class="eyebrow" style="margin-top:10px">Awards and activities</div>
+          <ul class="awards">
+            <li><span>2021</span>Winner (software team member), True 5G Robotic Bootcamp</li>
+            <li><span>2019</span>Outstanding Engineering Student Scholarship, Chiang Mai University</li>
+            <li><span>2019</span>Winner, Digital Design Camp × Chiang Mai University</li>
+            <li><span>2019</span>Community service project with the University of Michigan</li>
+            <li><span>2014</span>Silver Award, International Mathematics Competition (Chiang Mai)</li>
+            <li><span>2011</span>Gold Award, Mathematics Academic Competition (Chiang Mai)</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="photos">
+      <figure><img src="img/act-5g.webp" alt="True 5G Robotic Bootcamp team" loading="lazy"><figcaption>True 5G Robotic Bootcamp</figcaption></figure>
+      <figure><img src="img/act-design.webp" alt="Digital Design Camp award" loading="lazy"><figcaption>Digital Design Camp</figcaption></figure>
+      <figure><img src="img/act-scholar.webp" alt="Receiving the engineering scholarship" loading="lazy"><figcaption>Engineering scholarship</figcaption></figure>
+      <figure><img src="img/act-umich.webp" alt="Community service project with the University of Michigan" loading="lazy"><figcaption>Service with U. of Michigan</figcaption></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Let's <em>talk</em></h2>
+      <p>Open to roles in AI, computer vision and embedded software. I'm happy to walk through any of these projects in detail.</p>
+    </div>
+    <div>
+      <div class="addr">
+        <code id="email">cheer3142@gmail.com</code>
+        <button class="btn btn-primary" id="copyBtn" type="button">Copy email</button>
+        <a class="btn btn-line" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 Patcharadanai Sombatsatien</span><a href="design-system.html">Design system</a></div></footer>
+
+<script>
+(function () {
+  // theme toggle (dark-first)
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  function label() { btn.textContent = current() === 'dark' ? 'Day' : 'Night'; }
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+  label();
+  btn.addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label(); drawStatic();
+  });
+
+  // copy email
+  var copyBtn = document.getElementById('copyBtn'), toast = document.getElementById('toast');
+  copyBtn.addEventListener('click', function () {
+    var text = document.getElementById('email').textContent;
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      toast.textContent = 'Address selected. Press Ctrl+C or ⌘C to copy.';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { toast.textContent = 'Email address copied.'; }, fallback);
+    } else fallback();
+  });
+
+  // star field
+  var c = document.getElementById('sky'), ctx = c.getContext('2d'), stars = [], dpr = 1, W = 0, H = 0;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function rgb(name, d) { return getComputedStyle(root).getPropertyValue(name).trim() || d; }
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = c.clientWidth; H = c.clientHeight;
+    c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.round(W * H / 5200);
+    stars = [];
+    for (var i = 0; i < n; i++) stars.push({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.2 + 0.3, a: Math.random() * 0.6 + 0.15, p: Math.random() * 6.28, v: Math.random() * 0.06 + 0.01, w: Math.random() < 0.22 });
+    drawStatic();
+  }
+  function paint(t) {
+    var cool = rgb('--star', '217,220,218'), warm = rgb('--star-warm', '201,188,158');
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+      var a = reduce ? s.a : s.a * (0.65 + 0.35 * Math.sin(s.p + t * 0.0012));
+      ctx.fillStyle = 'rgba(' + (s.w ? warm : cool) + ',' + a.toFixed(3) + ')';
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fill();
+    }
+  }
+  function drawStatic() { paint(0); }
+  function loop(t) {
+    for (var i = 0; i < stars.length; i++) { var s = stars[i]; s.x += s.v; if (s.x > W + 2) s.x = -2; }
+    paint(t); requestAnimationFrame(loop);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  if (!reduce) requestAnimationFrame(loop);
+})();
+</script>
+
+</body>
+</html>

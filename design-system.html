@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="img/cerosoft-mark.webp">
+<title>Obsidian Observatory</title>
+<meta name="description" content="The shared design system of cerosoft.net and Patcharadanai Sombatsatien's portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+Thai:wght@400;500;600&family=Cormorant+Garamond:wght@400&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<style>
+/* Specimen-only layout. Every component shown below is the real class from site.css. */
+.ds-hero { padding-block: 72px 48px; border-bottom: 1px solid var(--line-lux); background: radial-gradient(circle at 85% 30%, var(--glow), transparent 30%), var(--surface); }
+.ds-hero h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1; letter-spacing: -0.04em; font-weight: 600; margin-top: 16px; }
+.ds-hero h1 em { font-style: normal; color: var(--accent-text); }
+.ds-hero p { margin-top: 18px; color: var(--ink-muted); max-width: 62ch; font-size: 18px; line-height: 30px; }
+.ds-blend { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 16px; align-items: center; margin-top: 36px; max-width: 760px; }
+.ds-blend div { border: 1px solid var(--line-lux); border-radius: var(--radius-lg); padding: 14px 16px; font-size: 14px; line-height: 21px; color: var(--ink-muted); }
+.ds-blend b { display: block; color: var(--ink); font-weight: 600; font-size: 15px; }
+.ds-blend span { color: var(--lux-text); font-family: var(--font-mono); font-size: 14px; }
+@media (max-width: 700px) { .ds-blend { grid-template-columns: 1fr; } .ds-blend span { display: none; } }
+
+.family { margin-top: 36px; }
+.family h3 { font-size: 20px; line-height: 28px; }
+.family > p { color: var(--ink-muted); font-size: 15px; margin-top: 4px; max-width: 70ch; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1px; margin-top: 16px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.sw { background: var(--surface-raised); display: flex; flex-direction: column; }
+.sw i { display: block; height: 76px; border-bottom: 1px solid var(--border); }
+.sw div { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 2px; }
+.sw b { font-size: 13px; font-weight: 600; }
+.sw code { font-family: var(--font-mono); font-size: 12px; color: var(--lux-text); }
+.sw span { font-size: 12px; line-height: 17px; color: var(--ink-muted); }
+
+.roles { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+.roles th { text-align: left; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; color: var(--ink-muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--ink); }
+.roles td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.roles code { font-family: var(--font-mono); font-size: 12px; color: var(--accent-text); }
+.chip { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; }
+.chip i { width: 18px; height: 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); }
+.roles-wrap { overflow-x: auto; }
+
+.type-row { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--border); align-items: baseline; }
+.type-list { border-top: 1px solid var(--ink); }
+.type-row .spec { font-family: var(--font-mono); font-size: 12px; line-height: 19px; color: var(--ink-muted); }
+.type-row .spec b { display: block; font-family: var(--font-sans); font-size: 14px; color: var(--lux-text); font-weight: 600; }
+@media (max-width: 640px) { .type-row { grid-template-columns: 1fr; gap: 8px; } }
+
+.specimen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.panel { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; display: flex; flex-direction: column; gap: 16px; background: var(--surface-raised); min-width: 0; }
+.panel > h3 { font-size: 15px; line-height: 22px; font-weight: 600; letter-spacing: 0; color: var(--ink-muted); }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.panel.full { grid-column: 1 / -1; }
+.mini-stage { padding: 28px; grid-template-columns: 1fr; gap: 12px; }
+.mini-stage p { color: var(--ink-muted); }
+.mini-band { padding: 28px; grid-template-columns: 1fr; gap: 0; }
+.orbit-demo { position: relative; width: 180px; height: 200px; margin: 24px auto; }
+.orbit-demo .portrait { height: 100%; aspect-ratio: auto; }
+@media (max-width: 760px) { .specimen { grid-template-columns: 1fr; } }
+
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+.rules ul { margin: 12px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.rules h3 { font-size: 20px; }
+.rules .no li::before { border-color: var(--lux-text); }
+@media (max-width: 760px) { .rules { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Patcharadanai <span>S.</span></a>
+    <div class="nav-links">
+      <a href="#colour">Colour</a>
+      <a href="#type">Type</a>
+      <a href="#components">Components</a>
+      <a href="#rules">Rules</a>
+    </div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme">Day</button>
+  </div>
+</nav>
+
+<header class="ds-hero">
+  <div class="wrap">
+    <div class="eyebrow">Design system</div>
+    <h1>Obsidian <em>Observatory</em></h1>
+    <p>One visual world shared by cerosoft.net and this portfolio. CeroSoft brings the materials: obsidian, ivory, champagne hairlines and a single cyan signal. The portfolio brings the sky.</p>
+    <div class="ds-blend">
+      <div><b>cerosoft.net</b>Obsidian, ivory, champagne, cyan. Square edges, hairlines, DM Sans.</div>
+      <span>+</span>
+      <div><b>Portfolio</b>Night sky, star field, instruments, data in mono.</div>
+      <span>=</span>
+      <div><b>Obsidian Observatory</b>Silver and champagne stars around an orbit, one cyan action.</div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="colour">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Colour</div>
+      <h2>Three families, one <em>signal</em></h2>
+      <p>Cyan is for action. Champagne is metal: hairlines, dates and numbers. Obsidian and ivory are the two kinds of light.</p>
+    </div>
+
+    <div class="family">
+      <h3>Signal cyan</h3>
+      <p>Fills primary buttons and focus rings. As text, it shifts lighter at night and deeper by day to stay above 4.5:1.</p>
+      <div class="swatches">
+        <div class="sw"><i style="background:#18bcc4"></i><div><b>cyan-400</b><code>#18bcc4</code><span>Link and accent text at night</span></div></div>
+        <div class="sw"><i style="background:#08a5ad"></i><div><b>cyan-500</b><code>#08a5ad</code><span>Button fill, focus ring</span></div></div>
+        <div class="sw"><i style="background:#066f74"></i><div><b>cyan-700</b><code>#066f74</code><span>Link and accent text by day</span></div></div>
+      </div>
+    </div>
+
+    <div class="family">
+      <h3>Champagne</h3>
+      <p>Never a fill. Hairlines at 22% alpha, the rule before each label, and every date, year and figure.</p>
+      <div class="swatches">
+        <div class="sw"><i style="background:#c9bc9e"></i><div><b>champagne-300</b><code>#c9bc9e</code><span>Metal text at night, hairlines</span></div></div>
+        <div class="sw"><i style="background:#6e5f3d"></i><div><b>bronze-700</b><code>#6e5f3d</code><span>Metal text by day</span></div></div>
+        <div class="sw"><i style="background:#211f19"></i><div><b>champagne-wash</b><code>#211f19</code><span>Callout ground at night</span></div></div>
+      </div>
+    </div>
+
+    <div class="family">
+      <h3>Obsidian and ivory</h3>
+      <p>Night surfaces step up in lightness; day surfaces step up toward white. The sunk layer holds contact, footer and deep bands.</p>
+      <div class="swatches">
+        <div class="sw"><i style="background:#080d10"></i><div><b>obsidian-950</b><code>#080d10</code><span>Sunk, deep band</span></div></div>
+        <div class="sw"><i style="background:#0c1216"></i><div><b>obsidian-900</b><code>#0c1216</code><span>Night page</span></div></div>
+        <div class="sw"><i style="background:#121a20"></i><div><b>obsidian-850</b><code>#121a20</code><span>Night card</span></div></div>
+        <div class="sw"><i style="background:#9ca7a9"></i><div><b>mist-400</b><code>#9ca7a9</code><span>Night secondary text</span></div></div>
+        <div class="sw"><i style="background:#f0eee8"></i><div><b>ivory-100</b><code>#f0eee8</code><span>Day page</span></div></div>
+        <div class="sw"><i style="background:#f8f7f3"></i><div><b>ivory-50</b><code>#f8f7f3</code><span>Day card</span></div></div>
+        <div class="sw"><i style="background:#56626a"></i><div><b>ink-600</b><code>#56626a</code><span>Day secondary text</span></div></div>
+        <div class="sw"><i style="background:#182127"></i><div><b>ink-900</b><code>#182127</code><span>Day text, stage ink</span></div></div>
+      </div>
+    </div>
+
+    <div class="family">
+      <h3>Semantic roles</h3>
+      <p>Components use these names only. Switch the theme above to watch each one remap.</p>
+      <div class="roles-wrap">
+        <table class="roles">
+          <thead><tr><th>Token</th><th>Current value</th><th>Used for</th></tr></thead>
+          <tbody id="roleRows">
+            <tr data-t="--surface"><td><code>--surface</code></td><td></td><td>Page background</td></tr>
+            <tr data-t="--surface-raised"><td><code>--surface-raised</code></td><td></td><td>Cards, tags, panels</td></tr>
+            <tr data-t="--surface-sunk"><td><code>--surface-sunk</code></td><td></td><td>Contact, footer</td></tr>
+            <tr data-t="--ink"><td><code>--ink</code></td><td></td><td>Headings and body</td></tr>
+            <tr data-t="--ink-muted"><td><code>--ink-muted</code></td><td></td><td>Supporting text</td></tr>
+            <tr data-t="--accent"><td><code>--accent</code></td><td></td><td>Primary action fill, focus</td></tr>
+            <tr data-t="--accent-text"><td><code>--accent-text</code></td><td></td><td>Links, organisations, accent words</td></tr>
+            <tr data-t="--lux-text"><td><code>--lux-text</code></td><td></td><td>Dates, figures, years</td></tr>
+            <tr data-t="--line-lux"><td><code>--line-lux</code></td><td></td><td>Champagne hairlines</td></tr>
+            <tr data-t="--border"><td><code>--border</code></td><td></td><td>Structural dividers</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="type">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Typography</div>
+      <h2>DM Sans carries the <em>voice</em></h2>
+      <p>One family for everything read. Cormorant only for publication years, mono only for data.</p>
+    </div>
+    <div class="type-list">
+      <div class="type-row"><div class="spec"><b>Display</b>DM Sans 600 · 42–68px · −0.04em</div><div style="font-size:clamp(36px,5.6vw,64px);line-height:1;letter-spacing:-0.04em;font-weight:600">Patcharadanai Sombatsatien</div></div>
+      <div class="type-row"><div class="spec"><b>Headline</b>DM Sans 500 · 34–48px · −0.035em</div><div style="font-size:clamp(30px,4.4vw,48px);line-height:1.08;letter-spacing:-0.035em;font-weight:500">Building <span style="color:var(--accent-text)">CeroSoft</span></div></div>
+      <div class="type-row"><div class="spec"><b>Title</b>DM Sans 500 · 22/30</div><div style="font-size:22px;line-height:30px;letter-spacing:-0.025em;font-weight:500">Adaptive-optics closed loop</div></div>
+      <div class="type-row"><div class="spec"><b>Lede</b>DM Sans 400 · 19/31</div><p class="lede">I build software where models meet hardware: deep learning, telescope instruments and RF test automation.</p></div>
+      <div class="type-row"><div class="spec"><b>Body</b>DM Sans 400 · 16/26 · Noto Sans Thai fallback</div><p>Calibration and characterisation of the adaptive-optics system, then closed-loop experiments. ระบบควบคุมเครื่องมือดาราศาสตร์</p></div>
+      <div class="type-row"><div class="spec"><b>Label</b>DM Sans 600 · 11px caps · 0.22em</div><div class="eyebrow">Selected work</div></div>
+      <div class="type-row"><div class="spec"><b>Numeral</b>Cormorant Garamond 400 · 30px</div><div class="pubs" style="border:0"><span class="yr" style="font-family:var(--font-serif);font-size:30px;line-height:28px;color:var(--lux-text)">2024 · 2025</span></div></div>
+      <div class="type-row"><div class="spec"><b>Data</b>IBM Plex Mono 500 · 12px</div><div class="meta">NARIT · EvWaCo · 2023–2024</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="components">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Components</div>
+      <h2>Live parts, not pictures</h2>
+      <p>Every element here uses the same class the portfolio ships.</p>
+    </div>
+    <div class="specimen">
+      <div class="panel">
+        <h3>Buttons</h3>
+        <div class="row"><a class="btn btn-primary" href="#components">Get in touch</a><a class="btn btn-line" href="#components">GitHub</a></div>
+        <p class="meta">Hover lifts the primary; focus draws a cyan ring.</p>
+      </div>
+      <div class="panel">
+        <h3>Tags and list markers</h3>
+        <div class="focus"><span class="tag">Python</span><span class="tag">Computer vision</span><span class="tag">PyVISA</span></div>
+        <ul class="role"><li>Shack–Hartmann sensor calibration</li><li>Leaky-integrator control loop</li></ul>
+      </div>
+      <div class="panel">
+        <h3>Stat</h3>
+        <div class="stats" style="grid-template-columns:1fr 1fr"><div class="stat"><b>3.73</b><span>GPA, M.Sc.</span></div><div class="stat"><b>5</b><span>Publications</span></div></div>
+      </div>
+      <div class="panel">
+        <h3>Callout</h3>
+        <div class="callout"><b>Full scholarship</b> from the Information Technology Foundation.</div>
+      </div>
+      <div class="panel full" style="padding:0;background:none;border:0">
+        <div class="venture on-stage mini-stage">
+          <div class="eyebrow">Product stage · fixed ivory in both themes</div>
+          <div class="venture-id"><img src="img/cerosoft-mark.webp" alt="CeroSoft logo" width="56" height="56"><div><h3>CeroSoft</h3><a href="https://cerosoft.net" target="_blank" rel="noopener">cerosoft.net</a></div></div>
+          <p>Lifted from cerosoft.net's portfolio stage: an ivory plate with dark ink, deep-cyan links and bronze figures.</p>
+          <div class="meta">Flagship product · live at Punna Residence 5</div>
+        </div>
+      </div>
+      <div class="panel full" style="padding:0;background:none;border:0">
+        <div class="feature mini-band">
+          <div class="eyebrow">Deep band · fixed obsidian in both themes</div>
+          <h3>Training-free domain adaptation via LoRA fusion</h3>
+          <ol class="pipeline">
+            <li><span class="n">1</span><div><b>Similarity-guided selection</b><span>Pick the adapters closest to the input domain</span></div></li>
+            <li><span class="n">2</span><div><b>Dynamic fusion</b><span>Weight and merge them at inference time</span></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Orbit</h3>
+        <div class="orbit-demo"><div class="orbit" aria-hidden="true"></div><div class="portrait"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="607" height="700"></div></div>
+      </div>
+      <div class="panel">
+        <h3>Card</h3>
+        <article class="card">
+          <div class="card-body">
+            <div class="meta">NARIT · 2023–2024</div>
+            <h3>Atmospheric LiDAR</h3>
+            <p>Hover the card: the border warms to champagne.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Rules</div>
+      <h2>Keep it precise</h2>
+    </div>
+    <div class="rules">
+      <div class="panel"><h3>Do</h3><ul class="role">
+        <li>Spend cyan only on what can be clicked, plus one accent word per heading</li>
+        <li>Put dates, figures and years in champagne by night, bronze by day</li>
+        <li>Separate with hairlines before reaching for a shadow</li>
+        <li>Check both themes; the two stages must not change</li>
+      </ul></div>
+      <div class="panel"><h3>Don't</h3><ul class="role no">
+        <li>Bring back the old gold and indigo</li>
+        <li>Round past 4px or use pill shapes</li>
+        <li>Use gradient text, glass cards or hard block shadows</li>
+        <li>Set champagne text on ivory</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Obsidian Observatory · spec in DESIGN.md, values in tokens.css</span><a href="index.html">Back to portfolio</a></div></footer>
+
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  function fillRoles() {
+    var cs = getComputedStyle(root);
+    document.querySelectorAll('#roleRows tr').forEach(function (tr) {
+      var v = cs.getPropertyValue(tr.getAttribute('data-t')).trim();
+      tr.children[1].innerHTML = '<span class="chip"><i style="background:' + v + '"></i>' + v + '</span>';
+    });
+  }
+  function label() { btn.textContent = current() === 'dark' ? 'Day' : 'Night'; fillRoles(); }
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+  label();
+  btn.addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label();
+  });
+})();
+</script>
+</body>
+</html>
