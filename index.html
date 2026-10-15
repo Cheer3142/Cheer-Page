@@ -56,7 +56,7 @@
 
 <div class="wrap">
   <div class="stats" role="list">
-    <div class="stat" role="listitem"><b>3 yrs 5 mos</b><span>Industry and research experience</span></div>
+    <div class="stat" role="listitem"><b id="expTotal">3 yrs 5 mos</b><span>Industry and research experience</span></div>
     <div class="stat" role="listitem"><b>5</b><span>Co-authored publications</span></div>
     <div class="stat" role="listitem"><b>3.63</b><span>GPA, M.Sc. Computer Science</span></div>
     <div class="stat" role="listitem"><b>3.78</b><span>GPA, B.Eng. Electrical Engineering</span></div>
@@ -279,7 +279,7 @@
     </div>
     <ol class="timeline">
       <li>
-        <div class="when"><b>Nov 2026 – Present</b>AirGradient</div>
+        <div class="when"><b>Nov 2026 – Present</b><span id="agTenure">AirGradient</span></div>
         <div class="what">
           <h3>Embedded Firmware Engineer</h3>
           <div class="org">AirGradient</div>
@@ -291,7 +291,7 @@
         <div class="when"><b>Present</b>CeroSoft</div>
         <div class="what">
           <h3>Founder and Software Developer</h3>
-          <div class="org">CeroSoft · Bangkok, Thailand</div>
+          <div class="org">CeroSoft · Thailand</div>
           <p>Designing and building business software end to end, from requirements to deployment and support. Flagship product: CondoMate, a condominium management system in live use.</p>
           <div class="focus"><span class="tag">Node.js</span><span class="tag">PostgreSQL · SQLite</span><span class="tag">React · TypeScript</span><span class="tag">Vercel</span></div>
         </div>
@@ -424,6 +424,20 @@
     try { localStorage.setItem('theme', next); } catch (e) {}
     label(); drawStatic();
   });
+
+  // experience total: Hana + NARIT (41 months) plus AirGradient from Nov 2026, counted from today
+  (function () {
+    var now = new Date(), ag = (now.getFullYear() - 2026) * 12 + (now.getMonth() - 10) + 1;
+    if (ag < 1) return;
+    function span(m) {
+      var y = Math.floor(m / 12), r = m % 12, out = [];
+      if (y) out.push(y + (y === 1 ? ' yr' : ' yrs'));
+      if (r) out.push(r + (r === 1 ? ' mo' : ' mos'));
+      return out.join(' ');
+    }
+    document.getElementById('expTotal').textContent = span(41 + ag);
+    document.getElementById('agTenure').textContent = span(ag) + ' · AirGradient';
+  })();
 
   // copy email
   var copyBtn = document.getElementById('copyBtn'), toast = document.getElementById('toast');
