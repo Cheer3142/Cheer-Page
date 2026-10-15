@@ -8,70 +8,77 @@
 <meta name="description" content="Portfolio of Patcharadanai Sombatsatien (Cheer): AI, computer vision and embedded systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+Thai:wght@400;500;600&family=Cormorant+Garamond:wght@400&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="site.css">
+<script>document.documentElement.className += " js";</script>
 </head>
 <body>
 
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap">
-    <a class="brand" href="#top">Patcharadanai <span>S.</span></a>
-    <div class="nav-links">
-      <a href="#cerosoft">CeroSoft</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#research">Research</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme">Day</button>
+<nav class="nav" id="nav" aria-label="Main">
+  <a class="brand" href="#top"><span class="live-dot" aria-hidden="true"></span>Patcharadanai S.</a>
+  <div class="nav-links">
+    <a href="#cerosoft">CeroSoft</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+  </div>
+  <a class="chip-cta" href="#contact">Get in touch</a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 5h12M2 11h12"/></svg>
+  </button>
+  <div class="sheet" id="sheet">
+    <a href="#cerosoft">CeroSoft</a><a href="#work">Work</a><a href="#experience">Experience</a>
+    <a href="#research">Research</a><a href="#education">Education</a><a href="#contact">Get in touch</a>
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <canvas id="sky" aria-hidden="true"></canvas>
-  <div class="wrap">
+<header class="hero dark notch-bottom" id="top">
+  <div class="hero-stage" aria-hidden="true"><canvas id="dome"></canvas></div>
+  <div class="wrap hero-grid">
     <div class="hero-text">
-      <div class="eyebrow">AI · Computer vision · Embedded systems</div>
-      <h1>Patcharadanai Sombatsatien<span class="nick">Cheer · 陈寅甲</span></h1>
-      <p class="lede">I build software where models meet hardware: deep learning for image segmentation, control software for telescope instruments, and test automation for RF production lines.</p>
-      <div class="focus">
+      <h1 id="heroName" aria-label="Patcharadanai Sombatsatien"><span class="line" aria-hidden="true">Patcharadanai</span><span class="line" aria-hidden="true">Sombatsatien</span></h1>
+      <p class="nick rise" style="--d:1.15s">Cheer · 陈寅甲</p>
+      <p class="lede rise" style="--d:1.25s">I build software where models meet hardware: deep learning for image segmentation, control software for telescope instruments, and test automation for RF production lines.</p>
+      <div class="focus rise" style="--d:1.35s">
         <span class="tag">Python</span><span class="tag">C++</span><span class="tag">VHDL</span>
         <span class="tag">Deep learning</span><span class="tag">Computer vision</span><span class="tag">PyVISA instrument control</span>
       </div>
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Get in touch</a>
-        <a class="btn btn-line" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub</a>
+      <div class="cta rise" style="--d:1.45s">
+        <a class="btn btn-primary" href="#contact">Get in touch <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-ghost" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
     </div>
-    <div class="portrait-col">
-      <div class="orbit" aria-hidden="true"></div>
-      <div class="portrait"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="928" height="1120"></div>
-      <div class="coords">Embedded Firmware Engineer · AirGradient<br>Founder · CeroSoft<br>M.Sc. · Xi'an Jiaotong University<br>Former engineer · NARIT and Hana</div>
+    <div class="hero-figure rise" style="--d:.5s">
+      <figure class="portrait card-dark"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="928" height="1120"></figure>
+      <ul class="markers">
+        <li class="marker live"><span class="live-dot" aria-hidden="true"></span>AirGradient · Firmware Engineer</li>
+        <li class="marker"><span class="live-dot" aria-hidden="true"></span>CeroSoft · Founder</li>
+        <li class="marker"><span class="live-dot" aria-hidden="true"></span>Xi'an Jiaotong · M.Sc.</li>
+      </ul>
+      <p class="former">Former engineer · NARIT and Hana</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b id="expTotal">3 yrs 5 mos</b><span>Industry and research experience</span></div>
+      <div class="stat" role="listitem"><b>5</b><span>Co-authored publications</span></div>
+      <div class="stat" role="listitem"><b>3.63</b><span>GPA, M.Sc. Computer Science</span></div>
+      <div class="stat" role="listitem"><b>3.78</b><span>GPA, B.Eng. Electrical Engineering</span></div>
     </div>
   </div>
 </header>
 
-<div class="wrap">
-  <div class="stats" role="list">
-    <div class="stat" role="listitem"><b id="expTotal">3 yrs 5 mos</b><span>Industry and research experience</span></div>
-    <div class="stat" role="listitem"><b>5</b><span>Co-authored publications</span></div>
-    <div class="stat" role="listitem"><b>3.63</b><span>GPA, M.Sc. Computer Science</span></div>
-    <div class="stat" role="listitem"><b>3.78</b><span>GPA, B.Eng. Electrical Engineering</span></div>
-  </div>
-</div>
-
 <main>
-<section id="cerosoft">
+<section id="cerosoft" class="section light">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Now</div>
-      <h2>Building <em>CeroSoft</em></h2>
+    <div class="statement-head">
+      <h2>Building CeroSoft</h2>
       <p>A software studio I founded to turn messy, manual workflows into simple systems that small businesses can actually run.</p>
     </div>
-    <article class="venture on-stage">
+    <article class="venture card-dark">
       <div class="venture-text">
         <div class="venture-id">
           <img src="img/cerosoft-mark.webp" alt="CeroSoft logo" width="52" height="52">
@@ -110,18 +117,17 @@
   </div>
 </section>
 
-<section id="work">
+<section id="work" class="section light">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Selected work</div>
+    <div class="statement-head">
       <h2>Projects</h2>
       <p>From a master's thesis in open-vocabulary segmentation to instrument software at the National Astronomical Research Institute of Thailand.</p>
     </div>
 
-    <article class="feature">
+    <article class="feature card-dark">
       <div>
-        <div class="eyebrow">Master's thesis · Xi'an Jiaotong University · 2024–2026</div>
         <h3>Training-free domain adaptation via LoRA fusion</h3>
+        <div class="meta">Master's thesis · Xi'an Jiaotong University · 2024–2026</div>
         <p>Parameter-Efficient Training-Free Domain Adaptation via LoRA Fusion for Open-Vocabulary Segmentation. Combines heterogeneous pre-training, parameter-efficient adaptation and similarity-driven adapter composition to keep zero-shot generalisation while improving cross-domain stability and computational efficiency.</p>
         <ol class="pipeline">
           <li><span class="n">1</span><div><b>Similarity-guided LoRA selection</b><span>Pick the adapters closest to the input domain</span></div></li>
@@ -221,7 +227,6 @@
         <div class="demo">
           <video src="video/line-notify.mp4" poster="img/line-notify.webp" controls muted playsinline preload="none" aria-label="Phone recording of the weekly station update arriving in LINE"></video>
           <div class="sub">
-            <div class="eyebrow">Demo</div>
             <h4>The weekly update arriving in the team's LINE group</h4>
             <p>Station status and equipment summaries are generated and pushed each week, so nobody compiles the report by hand.</p>
           </div>
@@ -271,10 +276,9 @@
   </div>
 </section>
 
-<section id="experience">
+<section id="experience" class="section dark notch-top notch-bottom">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Experience</div>
+    <div class="statement-head">
       <h2>Where I've worked</h2>
     </div>
     <ol class="timeline">
@@ -318,10 +322,9 @@
   </div>
 </section>
 
-<section id="research">
+<section id="research" class="section light">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Research</div>
+    <div class="statement-head">
       <h2>Publications</h2>
       <p>Co-author on five papers from my work at NARIT.</p>
     </div>
@@ -335,10 +338,9 @@
   </div>
 </section>
 
-<section id="education">
+<section id="education" class="section light">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Education</div>
+    <div class="statement-head">
       <h2>Study</h2>
     </div>
     <div class="edu">
@@ -365,7 +367,7 @@
             <dt>Foundation</dt><dd>Circuit theory, frequency modulation, digital signal processing</dd>
             <dt>GPA</dt><dd>3.78</dd>
           </dl>
-          <div class="eyebrow" style="margin-top:10px">Awards and activities</div>
+          <h4 class="subhead">Awards and activities</h4>
           <ul class="awards">
             <li><span>2021</span>Winner (software team member), True 5G Robotic Bootcamp</li>
             <li><span>2019</span>Outstanding Engineering Student Scholarship, Chiang Mai University</li>
@@ -387,18 +389,17 @@
 </section>
 </main>
 
-<section class="contact" id="contact">
-  <div class="wrap">
+<section class="section contact dark notch-top" id="contact">
+  <div class="wrap contact-grid">
     <div>
-      <div class="eyebrow">Contact</div>
-      <h2>Let's <em>talk</em></h2>
+      <h2>Let's tal<span class="last">k</span></h2>
       <p>Open to roles in AI, computer vision and embedded software. I'm happy to walk through any of these projects in detail.</p>
     </div>
     <div>
       <div class="addr">
         <code id="email">cheer3142@gmail.com</code>
-        <button class="btn btn-primary" id="copyBtn" type="button">Copy email</button>
-        <a class="btn btn-line" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub</a>
+        <button class="btn btn-primary" id="copyBtn" type="button">Copy email <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+        <a class="btn btn-ghost" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
       <div class="toast" id="toast" role="status" aria-live="polite"></div>
     </div>
@@ -408,22 +409,45 @@
 
 <script>
 (function () {
-  // theme toggle (dark-first)
-  var root = document.documentElement, btn = document.getElementById('themeBtn');
-  function current() {
-    var t = root.getAttribute('data-theme');
-    if (t) return t;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nav = document.getElementById('nav'), hero = document.getElementById('top');
+
+  // nav capsule turns solid once the hero has scrolled away
+  function onScroll() { nav.classList.toggle('solid', window.scrollY > hero.offsetHeight - 140); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // mobile menu
+  var menuBtn = document.getElementById('menuBtn'), sheet = document.getElementById('sheet');
+  function setMenu(open) { nav.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  sheet.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  // hero headline types in grapheme by grapheme; the last letter is the one cyan note
+  try {
+    var h = document.getElementById('heroName'), lines = h.querySelectorAll('.line'), all = [];
+    var seg = window.Intl && Intl.Segmenter ? new Intl.Segmenter(undefined, { granularity: 'grapheme' }) : null;
+    Array.prototype.forEach.call(lines, function (line, li) {
+      var txt = line.textContent; line.textContent = '';
+      var parts = seg ? Array.from(seg.segment(txt), function (x) { return x.segment; }) : Array.from(txt);
+      parts.forEach(function (g, i) {
+        var sp = document.createElement('span'); sp.textContent = g;
+        if (!reduce) sp.style.opacity = 0;
+        if (li === lines.length - 1 && i === parts.length - 1) sp.className = 'last';
+        line.appendChild(sp); all.push(sp);
+      });
+    });
+    if (!reduce) all.forEach(function (sp, i) { setTimeout(function () { sp.style.opacity = 1; }, 250 + i * 45); });
+  } catch (e) {}
+
+  // cards settle into place as they enter; they are never hidden
+  var targets = document.querySelectorAll('.statement-head, .venture, .feature, .card, .timeline li, .pubs li, .photos figure, .contact-grid > div');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    Array.prototype.forEach.call(targets, function (el) { el.classList.add('settle'); io.observe(el); });
   }
-  function label() { btn.textContent = current() === 'dark' ? 'Day' : 'Night'; }
-  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
-  label();
-  btn.addEventListener('click', function () {
-    var next = current() === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    label(); drawStatic();
-  });
 
   // experience total: Hana + NARIT (41 months) plus AirGradient from Nov 2026, counted from today
   (function () {
@@ -446,45 +470,83 @@
     function fallback() {
       var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
       var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      toast.textContent = 'Address selected. Press Ctrl+C or ⌘C to copy.';
+      toast.textContent = 'Address selected. Press Ctrl+C or Cmd+C to copy.';
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () { toast.textContent = 'Email address copied.'; }, fallback);
     } else fallback();
   });
 
-  // star field
-  var c = document.getElementById('sky'), ctx = c.getContext('2d'), stars = [], dpr = 1, W = 0, H = 0;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function rgb(name, d) { return getComputedStyle(root).getPropertyValue(name).trim() || d; }
-  function resize() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = c.clientWidth; H = c.clientHeight;
-    c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var n = Math.round(W * H / 5200);
-    stars = [];
-    for (var i = 0; i < n; i++) stars.push({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.2 + 0.3, a: Math.random() * 0.6 + 0.15, p: Math.random() * 6.28, v: Math.random() * 0.06 + 0.01, w: Math.random() < 0.22 });
-    drawStatic();
-  }
-  function paint(t) {
-    var cool = rgb('--star', '217,220,218'), warm = rgb('--star-warm', '201,188,158');
-    ctx.clearRect(0, 0, W, H);
-    for (var i = 0; i < stars.length; i++) {
-      var s = stars[i];
-      var a = reduce ? s.a : s.a * (0.65 + 0.35 * Math.sin(s.p + t * 0.0012));
-      ctx.fillStyle = 'rgba(' + (s.w ? warm : cool) + ',' + a.toFixed(3) + ')';
-      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fill();
+  // wireframe dome: draws upward with a cyan leading edge, then turns slowly with one live marker in orbit
+  (function () {
+    var cv = document.getElementById('dome'); if (!cv || !cv.getContext) return;
+    var ctx = cv.getContext('2d'), W = 0, H = 0, start = performance.now(), visible = true, raf = 0, D = Math.PI / 180;
+    function ease(t) { return 1 - Math.pow(1 - t, 3); }
+    function pt(phi, lam, ry, tilt, rad) {
+      var cp = Math.cos(phi), x = cp * Math.cos(lam) * rad, y = Math.sin(phi) * rad, z = cp * Math.sin(lam) * rad;
+      var x1 = x * Math.cos(ry) + z * Math.sin(ry), z1 = -x * Math.sin(ry) + z * Math.cos(ry);
+      var y2 = y * Math.cos(tilt) - z1 * Math.sin(tilt), z2 = y * Math.sin(tilt) + z1 * Math.cos(tilt);
+      return { x: x1, y: y2, z: z2 };
     }
-  }
-  function drawStatic() { paint(0); }
-  function loop(t) {
-    for (var i = 0; i < stars.length; i++) { var s = stars[i]; s.x += s.v; if (s.x > W + 2) s.x = -2; }
-    paint(t); requestAnimationFrame(loop);
-  }
-  window.addEventListener('resize', resize);
-  resize();
-  if (!reduce) requestAnimationFrame(loop);
+    function resize() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      frame(performance.now());
+    }
+    function frame(now) {
+      var t = reduce ? 6000 : now - start;
+      ctx.clearRect(0, 0, W, H);
+      var R = Math.min(W * 0.4, H * 0.38), cx = W * (W > 700 ? 0.56 : 0.5), cy = H * 0.5;
+      var p = Math.min(1, t / 2800), thr = -60 + 145 * ease(p);
+      var ry = 0.9 + (reduce ? 0 : t * 0.00007), tilt = -0.38;
+      function map(q) { var s = 1 / (1 - q.z * 0.16); return { x: cx + R * q.x * s, y: cy - R * q.y * s, z: q.z }; }
+      function seg(a, b, rgb, alphaMul) {
+        var z = (a.z + b.z) / 2, al = (0.07 + 0.3 * Math.pow((z + 1) / 2, 1.5)) * alphaMul;
+        ctx.strokeStyle = 'rgba(' + rgb + ',' + al.toFixed(3) + ')';
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+      ctx.lineWidth = 0.8;
+      var lead = -999;
+      for (var la = -60; la <= 80; la += 14) { if (la <= thr) lead = la; }
+      for (var lat = -60; lat <= 80; lat += 14) {
+        if (lat > thr) break;
+        var prev = null, rgb = (p < 1 && lat === lead) ? '0,173,181' : '230,232,234', mul = (p < 1 && lat === lead) ? 3 : 1;
+        for (var lo = 0; lo <= 360; lo += 6) {
+          var q = map(pt(lat * D, lo * D, ry, tilt, 1));
+          if (prev) seg(prev, q, rgb, mul); prev = q;
+        }
+      }
+      for (var lon = 0; lon < 360; lon += 20) {
+        var pv = null;
+        for (var ph = -60; ph <= 80; ph += 5) {
+          if (ph > thr) break;
+          var q2 = map(pt(ph * D, lon * D, ry, tilt, 1));
+          if (pv) seg(pv, q2, '230,232,234', 1); pv = q2;
+        }
+      }
+      var fade = Math.min(1, Math.max(0, (t - 2800) / 900));
+      if (fade > 0) {
+        var rp = null, rt = 0.55;
+        for (var a = 0; a <= 360; a += 5) {
+          var rq = map(pt(0, a * D, 0.3, rt, 1.32));
+          if (rp) seg(rp, rq, '0,173,181', 2.2 * fade); rp = rq;
+        }
+        var m = map(pt(0, (t * 0.0005) % 6.2832, 0.3, rt, 1.32));
+        ctx.fillStyle = 'rgba(0,173,181,' + (0.95 * fade).toFixed(2) + ')';
+        ctx.beginPath(); ctx.arc(m.x, m.y, 3.2, 0, 6.2832); ctx.fill();
+        ctx.strokeStyle = 'rgba(0,173,181,' + (0.3 * fade).toFixed(2) + ')'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(m.x, m.y, 8, 0, 6.2832); ctx.stroke();
+      }
+    }
+    function loop(now) { frame(now); raf = visible && !document.hidden ? requestAnimationFrame(loop) : 0; }
+    function kick() { if (!raf && !reduce) raf = requestAnimationFrame(loop); }
+    window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', kick);
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; kick(); }).observe(cv);
+    resize(); kick();
+  })();
 })();
+
 </script>
 
 </body>
