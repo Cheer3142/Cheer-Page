@@ -199,6 +199,8 @@ section { padding-block: 88px; }
 .timeline li { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--border); }
 .when { font-family: var(--font-mono); font-size: 13px; line-height: 20px; color: var(--ink-muted); display: flex; flex-direction: column; gap: 4px; }
 .when b { color: var(--lux-text); font-weight: 500; }
+.logo-tile { display: grid; place-items: center; width: 96px; height: 56px; padding: 8px; margin-bottom: 8px; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-md); }
+.logo-tile img { max-width: 78px; max-height: 38px; width: auto; height: auto; object-fit: contain; }
 .what { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .what h3 { font-size: 22px; line-height: 30px; }
 .what .org { color: var(--accent-text); font-size: 15px; }
