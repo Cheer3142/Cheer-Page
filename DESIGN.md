@@ -203,8 +203,8 @@ Company logos sit on a 96×56 white tile (6px radius) above each date, so JPG an
 ### Stack tags
 Each project card ends its body with up to three mono tags naming the work domain or tools stated in the card text (never a claim the card does not make). Light cards use the Well chip; the dark thesis card uses the translucent dark chip. Captions under photos, clips and screenshots are sentence-case Inter, not mono caps.
 
-### Disclosure ("More photos")
-Each project card shows one lead visual and the body; extra photos and video fold into a native `<details class="more">` row: a mono uppercase summary with a chevron, 56px tall, hairline above. Closed content loads nothing. The datacube figure stays visible because it is key evidence.
+### Gallery ("On the bench")
+Nothing is folded away. Project cards show one lead visual and the body; every extra photo and clip sits in a charcoal "On the bench" section directly below Projects, one numbered reel per project (mono cyan index, title, one line). Each reel is a 12-column bento of hairline-bordered tiles with a bottom gradient and a mono uppercase caption; a 14px cyan corner tick marks every tile. Clip tiles carry the caption at the top so the native controls stay clear. Charts and diagrams that must not be cropped use the `contain` tile on white with a caption bar. The datacube figure stays on its card. The Education photos use the same tile as one open bento. On phones the grid drops to two columns and wide tiles span both.
 
 ### Skip link, nav state, links
 A cyan "Skip to content" chip appears on keyboard focus. The nav marks the current section with `aria-current` (a 8% white wash). The nav holds four links plus the CTA; the mobile sheet holds all five sections. The email is a real `mailto:` link in a hairline box. Tap targets are at least 44px on phones.
