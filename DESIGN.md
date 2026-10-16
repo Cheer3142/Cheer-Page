@@ -200,6 +200,9 @@ A canvas wireframe sphere behind the hero portrait. Latitude and longitude lines
 ### Timeline logo tiles
 Company logos sit on a 96×56 white tile (6px radius) above each date, so JPG and SVG logos with white backgrounds read on charcoal.
 
+### Stack tags
+Each project card ends its body with up to three mono tags naming the work domain or tools stated in the card text (never a claim the card does not make). Light cards use the Well chip; the dark thesis card uses the translucent dark chip. Captions under photos, clips and screenshots are sentence-case Inter, not mono caps.
+
 ### Disclosure ("More photos")
 Each project card shows one lead visual and the body; extra photos and video fold into a native `<details class="more">` row: a mono uppercase summary with a chevron, 56px tall, hairline above. Closed content loads nothing. The datacube figure stays visible because it is key evidence.
 

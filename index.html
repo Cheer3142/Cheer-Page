@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" href="img/cerosoft-mark.webp">
-<title>Patcharadanai Sombatsatien</title>
-<meta name="description" content="Portfolio of Patcharadanai Sombatsatien (Cheer): AI, computer vision and embedded systems.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<title>Patcharadanai Sombatsatien · Embedded Firmware Engineer</title>
+<meta name="description" content="Portfolio of Patcharadanai Sombatsatien (Cheer): embedded firmware, computer vision and instrument control. Founder of CeroSoft.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap">
@@ -24,6 +24,7 @@
     <a href="#work">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#research">Research</a>
+    <a href="#education">Education</a>
   </div>
   <a class="chip-cta" href="#contact">Get in touch</a>
   <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
@@ -136,6 +137,7 @@
         <h3>Training-free domain adaptation via LoRA fusion</h3>
         <div class="meta">Master's thesis · Xi'an Jiaotong University · 2024–2026</div>
         <p>Parameter-Efficient Training-Free Domain Adaptation via LoRA Fusion for Open-Vocabulary Segmentation. Combines heterogeneous pre-training, parameter-efficient adaptation and similarity-driven adapter composition to keep zero-shot generalisation while improving cross-domain stability and computational efficiency.</p>
+        <div class="focus stack"><span class="tag">LoRA fusion</span><span class="tag">Open-vocabulary segmentation</span><span class="tag">Deep learning</span></div>
         <ol class="pipeline">
           <li><span class="n">1</span><div><b>Similarity-guided LoRA selection</b><span>Pick the adapters closest to the input domain</span></div></li>
           <li><span class="n">2</span><div><b>Dynamic fusion</b><span>Weight and merge them at inference time</span></div></li>
@@ -163,6 +165,7 @@
             <li>Control software for the actuator: COM-port selection, motion control, saved configurations</li>
             <li>Live FWHM measurement tied to actuator position</li>
           </ul>
+          <div class="focus stack"><span class="tag">Instrument control</span><span class="tag">Motion control</span><span class="tag">Optics</span></div>
         </div>
         <details class="more">
           <summary>More photos and video</summary>
@@ -193,6 +196,7 @@
             <li>Shack–Hartmann wavefront sensor and deformable mirror calibration</li>
             <li>Interaction-matrix measurement and leaky-integrator control loop</li>
           </ul>
+          <div class="focus stack"><span class="tag">Adaptive optics</span><span class="tag">Control loop</span><span class="tag">Calibration</span></div>
         </div>
         <details class="more">
           <summary>More photos</summary>
@@ -218,6 +222,7 @@
             <li>Range-correction data processing and laser power control</li>
             <li>Dashboard showing live readings and LiDAR profiles</li>
           </ul>
+          <div class="focus stack"><span class="tag">Data processing</span><span class="tag">Laser control</span><span class="tag">Web dashboard</span></div>
         </div>
         <details class="more">
           <summary>More photos and video</summary>
@@ -249,6 +254,7 @@
             <li>Data-cube visualisation, shown here at 656.59 nm</li>
             <li>Distortion correction to reveal solar features</li>
           </ul>
+          <div class="focus stack"><span class="tag">Optics</span><span class="tag">3D printing</span><span class="tag">Data cube</span></div>
         </div>
         <details class="more">
           <summary>More photos</summary>
@@ -270,9 +276,20 @@
           <div class="meta">Hana Microelectronics × Keysight Technologies · 2021–2023</div>
           <h3>Four test-line automation projects</h3>
           <p>Each one replaced a manual step on the RF production line with a small program.</p>
+          <div class="focus stack"><span class="tag">Python</span><span class="tag">PyVISA</span><span class="tag">Test automation</span></div>
         </div>
         <div class="auto">
-          <figure><div class="pic"><img src="img/hana-station.webp" alt="Pie chart of station run, idle and setup time" loading="lazy"></div>
+          <figure><div class="pic"><svg class="dg" viewBox="0 0 280 210" role="img" aria-label="Donut chart of test-station time: idle 52.8 percent, run 41.7 percent, setup 5.6 percent">
+  <text class="dg-t" x="14" y="26">MMA station performance</text>
+  <g transform="rotate(-90 78 118)" fill="none" stroke-width="26">
+    <circle cx="78" cy="118" r="52" stroke="#393e46" stroke-dasharray="172.5 326.7" stroke-dashoffset="0"/>
+    <circle cx="78" cy="118" r="52" stroke="#00adb5" stroke-dasharray="136.2 326.7" stroke-dashoffset="-172.5"/>
+    <circle cx="78" cy="118" r="52" stroke="#c9cdd1" stroke-dasharray="18.3 326.7" stroke-dashoffset="-308.7"/>
+  </g>
+  <rect x="160" y="86" width="12" height="12" rx="2" fill="#393e46"/><text class="dg-t" x="180" y="96">Idle</text><text class="dg-t" x="180" y="112" style="font-weight:400" fill="#5b616b">52.8%</text>
+  <rect x="160" y="126" width="12" height="12" rx="2" fill="#00adb5"/><text class="dg-t" x="180" y="136">Run</text><text class="dg-t" x="180" y="152" style="font-weight:400" fill="#5b616b">41.7%</text>
+  <rect x="160" y="166" width="12" height="12" rx="2" fill="#c9cdd1"/><text class="dg-t" x="180" y="176">Setup</text><text class="dg-t" x="180" y="192" style="font-weight:400" fill="#5b616b">5.6%</text>
+</svg></div>
             <figcaption><b>Weekly test-station update</b><span>Station utilisation sent to the team automatically through LINE Notify.</span></figcaption></figure>
           <figure><div class="pic"><svg class="dg" viewBox="0 0 280 210" role="img" aria-label="Diagram: three instruments feed a program through PyVISA, which writes to a database and sends an e-mail alert">
   <g class="dg-ln"><path d="M74 48C98 48 102 90 118 92"/><path d="M74 94L118 100"/><path d="M74 140C98 140 102 110 118 108"/><path d="M190 100H219"/><path class="two" d="M155 118V137"/></g>
@@ -325,6 +342,7 @@
             <li>Image processing on intersection video</li>
             <li>Vehicle detection, tracking and per-route counting</li>
           </ul>
+          <div class="focus stack"><span class="tag">Image processing</span><span class="tag">Detection and tracking</span></div>
         </div>
       </article>
 
@@ -350,6 +368,7 @@
               <li>Helped develop a web-based system to track flood conditions for the community in Mae Chan, Chiang Rai</li>
             </ul>
           </div>
+          <div class="focus stack"><span class="tag">Microcontroller firmware</span><span class="tag">PM2.5 sensing</span><span class="tag">Web system</span></div>
         </div>
       </article>
     </div>
@@ -481,7 +500,7 @@
   <div class="wrap contact-grid">
     <div>
       <h2>Let's tal<span class="last">k</span></h2>
-      <p>Open to roles in AI, computer vision and embedded software. I'm happy to walk through any of these projects in detail.</p>
+      <p>I'm an embedded firmware engineer at AirGradient from November 2026 and I build software at CeroSoft. Happy to talk about firmware, computer vision and instrument control, or to walk through any of these projects in detail.</p>
     </div>
     <div>
       <div class="addr">
@@ -493,7 +512,7 @@
     </div>
   </div>
 </section>
-<footer><div class="wrap"><span>© 2026 Patcharadanai Sombatsatien</span><a href="design-system.html">Design system</a></div></footer>
+<footer><div class="wrap"><span>© 2026 Patcharadanai Sombatsatien</span></div></footer>
 
 <script>
 (function () {
@@ -557,7 +576,7 @@
     Array.prototype.forEach.call(vids, function (v) { vio.observe(v); });
   })();
 
-  // current section in the nav
+  // current section in the nav (cleared at the top and at the contact section)
   (function () {
     if (!('IntersectionObserver' in window)) return;
     var links = document.querySelectorAll('.nav-links a, .sheet a'), map = {};
@@ -565,12 +584,24 @@
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
-        var id = en.target.id;
         Array.prototype.forEach.call(links, function (a) { a.removeAttribute('aria-current'); });
-        (map[id] || []).forEach(function (a) { a.setAttribute('aria-current', 'true'); });
+        (map[en.target.id] || []).forEach(function (a) { a.setAttribute('aria-current', 'true'); });
       });
     }, { rootMargin: '-40% 0px -55% 0px' });
-    ['cerosoft', 'work', 'experience', 'research', 'education'].forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+    ['top', 'cerosoft', 'work', 'experience', 'research', 'education', 'contact'].forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+  })();
+
+  // the two cards in a row open and close together, so a row never has a blank gap
+  (function () {
+    var grid = document.querySelector('#work .grid'); if (!grid) return;
+    var cards = Array.prototype.filter.call(grid.children, function (c) { return c.classList.contains('card'); });
+    var pair = { 0: 1, 1: 0, 2: 3, 3: 2, 5: 6, 6: 5 };
+    grid.addEventListener('toggle', function (e) {
+      var d = e.target; if (!d.matches || !d.matches('details.more')) return;
+      var p = cards[pair[cards.indexOf(d.closest('.card'))]];
+      var pd = p && p.querySelector(':scope > details.more');
+      if (pd && pd.open !== d.open) pd.open = d.open;
+    }, true);
   })();
 
   // experience total: Hana + NARIT (41 months) plus AirGradient from Nov 2026, counted from today.
