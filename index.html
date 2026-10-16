@@ -16,21 +16,21 @@
 <body>
 
 
+<a class="skip" href="#main">Skip to content</a>
 <nav class="nav" id="nav" aria-label="Main">
   <a class="brand" href="#top"><span class="live-dot" aria-hidden="true"></span>Patcharadanai S.</a>
   <div class="nav-links">
     <a href="#cerosoft">CeroSoft</a>
-    <a href="#work">Work</a>
+    <a href="#work">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#research">Research</a>
-    <a href="#education">Education</a>
   </div>
   <a class="chip-cta" href="#contact">Get in touch</a>
   <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 5h12M2 11h12"/></svg>
   </button>
   <div class="sheet" id="sheet">
-    <a href="#cerosoft">CeroSoft</a><a href="#work">Work</a><a href="#experience">Experience</a>
+    <a href="#cerosoft">CeroSoft</a><a href="#work">Projects</a><a href="#experience">Experience</a>
     <a href="#research">Research</a><a href="#education">Education</a><a href="#contact">Get in touch</a>
   </div>
 </nav>
@@ -41,10 +41,9 @@
     <div class="hero-text">
       <h1 id="heroName" aria-label="Patcharadanai Sombatsatien"><span class="line" aria-hidden="true">Patcharadanai</span><span class="line" aria-hidden="true">Sombatsatien</span></h1>
       <p class="nick rise" style="--d:1.15s">Cheer · 陈寅甲</p>
-      <p class="lede rise" style="--d:1.25s">I build software where models meet hardware: deep learning for image segmentation, control software for telescope instruments, and test automation for RF production lines.</p>
+      <p class="lede rise" style="--d:1.25s">I'm an embedded firmware engineer at AirGradient (from November 2026) and the founder of CeroSoft, where I build software that small businesses and condominiums run on. My background: computer vision research, telescope instrument control at NARIT and RF test automation at Hana.</p>
       <div class="focus rise" style="--d:1.35s">
-        <span class="tag">Python</span><span class="tag">C++</span><span class="tag">VHDL</span>
-        <span class="tag">Deep learning</span><span class="tag">Computer vision</span><span class="tag">PyVISA instrument control</span>
+        <span class="tag">Embedded firmware</span><span class="tag">Python · C++ · VHDL</span><span class="tag">Computer vision</span><span class="tag">Instrument control</span>
       </div>
       <div class="cta rise" style="--d:1.45s">
         <a class="btn btn-primary" href="#contact">Get in touch <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -54,8 +53,8 @@
     <div class="hero-figure rise" style="--d:.5s">
       <figure class="portrait card-dark"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="928" height="1120"></figure>
       <ul class="markers">
-        <li class="marker live"><span class="live-dot" aria-hidden="true"></span>AirGradient · Firmware Engineer</li>
-        <li class="marker"><span class="live-dot" aria-hidden="true"></span>CeroSoft · Founder</li>
+        <li class="marker" id="mkAg"><span class="live-dot" aria-hidden="true"></span><span id="mkAgText">AirGradient · From Nov 2026</span></li>
+        <li class="marker live"><span class="live-dot" aria-hidden="true"></span>CeroSoft · Founder</li>
         <li class="marker"><span class="live-dot" aria-hidden="true"></span>Xi'an Jiaotong · M.Sc.</li>
       </ul>
       <p class="former">Former engineer · NARIT and Hana</p>
@@ -63,15 +62,23 @@
   </div>
   <div class="wrap">
     <div class="stats" role="list">
-      <div class="stat" role="listitem"><b id="expTotal">3 yrs 5 mos</b><span>Industry and research experience</span></div>
+      <div class="stat" role="listitem"><b id="expTotal">3 yrs 5 mos</b><span>In industry and research (NARIT, Hana)</span></div>
       <div class="stat" role="listitem"><b>5</b><span>Co-authored publications</span></div>
-      <div class="stat" role="listitem"><b>3.63</b><span>GPA, M.Sc. Computer Science</span></div>
-      <div class="stat" role="listitem"><b>3.78</b><span>GPA, B.Eng. Electrical Engineering</span></div>
+      <div class="stat" role="listitem"><b>4</b><span>Production-line tools built at Hana</span></div>
+      <div class="stat" role="listitem"><b>1</b><span>Product in live use: CondoMate</span></div>
     </div>
   </div>
 </header>
 
-<main>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="dg-ah" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L7 4 1 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <symbol id="dg-db" viewBox="0 0 32 38"><path d="M1 7v24c0 3.3 6.7 6 15 6s15-2.7 15-6V7" fill="#fff" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/><ellipse cx="16" cy="7" rx="15" ry="6" fill="#fff" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path d="M1 15c0 3.3 6.7 6 15 6s15-2.7 15-6M1 23c0 3.3 6.7 6 15 6s15-2.7 15-6" fill="none" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/></symbol>
+    <symbol id="dg-mail" viewBox="0 0 40 28"><rect x=".75" y=".75" width="38.5" height="26.5" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path d="M3 5l17 12L37 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></symbol>
+    <symbol id="dg-sheet" viewBox="0 0 34 40"><rect x=".75" y=".75" width="32.5" height="38.5" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/><rect x="1.5" y="1.5" width="31" height="8" rx="2" fill="currentColor" opacity=".14"/><path d="M12 9v29M22 9v29M1 17h32M1 25h32M1 33h32" fill="none" stroke="currentColor" stroke-width="1" opacity=".55" vector-effect="non-scaling-stroke"/></symbol>
+  </defs>
+</svg>
+<main id="main">
 <section id="cerosoft" class="section light">
   <div class="wrap">
     <div class="statement-head">
@@ -82,7 +89,7 @@
       <div class="venture-text">
         <div class="venture-id">
           <img src="img/cerosoft-mark.webp" alt="CeroSoft logo" width="52" height="52">
-          <div><h3>CeroSoft</h3><a href="https://cerosoft.net" target="_blank" rel="noopener">cerosoft.net</a></div>
+          <div><p class="venture-name">CeroSoft</p><a href="https://cerosoft.net" target="_blank" rel="noopener">cerosoft.net</a></div>
         </div>
         <p>From zero to solution. CeroSoft starts from the business problem, not the technology, and builds software for SMEs, condominiums and local service businesses that still run on Excel, chat groups and paper.</p>
         <div class="focus">
@@ -90,7 +97,7 @@
         </div>
         <div class="product">
           <div class="meta">Flagship product · live at Punna Residence 5</div>
-          <h4>CondoMate: condominium management system</h4>
+          <h3>CondoMate: condominium management system</h3>
           <p>One system for residents and the management office: repair requests, parcel tracking, shared-space booking, announcements, finance and reports.</p>
           <ul class="role">
             <li>Node.js server and API with sign-in, role-based access and file uploads</li>
@@ -100,7 +107,7 @@
           </ul>
         </div>
         <div class="product">
-          <h4>Company website</h4>
+          <h3>Company website</h3>
           <ul class="role">
             <li>Bilingual Thai/English site built with React 19, TypeScript and Vite</li>
             <li>Hosted on Vercel with Cloudflare DNS; contact form sent through a serverless function and Resend</li>
@@ -157,6 +164,20 @@
             <li>Live FWHM measurement tied to actuator position</li>
           </ul>
         </div>
+        <details class="more">
+          <summary>More photos and video</summary>
+        <div class="thumbs">
+          <figure><img src="img/fpm-push.webp" alt="Nano-piezo actuator pushing the focal-plane mask mount" width="900" height="675" loading="lazy"><figcaption>Actuator and mask mount</figcaption></figure>
+          <figure><img src="img/fpm-bench-full.webp" alt="Full focal-plane mask test bench with optics and actuator" width="900" height="675" loading="lazy"><figcaption>Full test bench</figcaption></figure>
+        </div>
+        <div class="demo">
+          <video src="video/translating-state.mp4" poster="img/poster-translating-state.webp" controls muted playsinline preload="none" aria-label="Recording of the actuator control software running during a translation move"></video>
+          <div class="sub">
+            <h4>Translating state</h4>
+            <p>The control software running while the actuator moves the focal-plane mask.</p>
+          </div>
+        </div>
+        </details>
       </article>
 
       <article class="card">
@@ -173,6 +194,15 @@
             <li>Interaction-matrix measurement and leaky-integrator control loop</li>
           </ul>
         </div>
+        <details class="more">
+          <summary>More photos</summary>
+        <div class="thumbs">
+          <figure><img src="img/ao-bench.webp" alt="Full EvWaCo optical bench in the lab with project posters on the wall" width="1000" height="562" loading="lazy"><figcaption>Full EvWaCo</figcaption></figure>
+          <figure><img src="img/ao-flip-mirror.webp" alt="Filter wheel on the optical bench, with a Thorlabs camera behind it" width="900" height="675" loading="lazy"><figcaption>Filter wheel</figcaption></figure>
+          <figure><img src="img/ao-wfs.webp" alt="Wavefront sensor camera mounted on the optical table" width="900" height="675" loading="lazy"><figcaption>Wavefront sensor</figcaption></figure>
+          <figure><img src="img/ao-lab.webp" alt="Adaptive-optics bench with the beam path and mounts" width="900" height="1599" loading="lazy"><figcaption>AO bench</figcaption></figure>
+        </div>
+        </details>
       </article>
 
       <article class="card">
@@ -190,6 +220,21 @@
             <li>Dashboard showing live readings and LiDAR profiles</li>
           </ul>
         </div>
+        <details class="more">
+          <summary>More photos and video</summary>
+        <div class="thumbs tall">
+          <figure><img src="img/lidar-beam.webp" alt="LiDAR station firing a green laser beam into the evening sky" width="720" height="1279" loading="lazy"><figcaption>Laser beam</figcaption></figure>
+          <figure><img src="img/lidar-mockup.webp" alt="3D-printed LiDAR mock-up with a green beam and a cloud model" width="720" height="1279" loading="lazy"><figcaption>3D-printed mock-up</figcaption></figure>
+          <figure><img src="img/lidar-site.webp" alt="Two team members next to the LiDAR on site" width="720" height="1279" loading="lazy"><figcaption>LiDAR on site</figcaption></figure>
+        </div>
+        <div class="demo">
+          <video src="video/lidar-field.mp4" poster="img/poster-lidar-field.webp" controls muted playsinline preload="none" aria-label="Field recording of the LiDAR system"></video>
+          <div class="sub">
+            <h4>Field recording</h4>
+            <p>The LiDAR system set up and running outdoors with the team.</p>
+          </div>
+        </div>
+        </details>
       </article>
 
       <article class="card">
@@ -206,6 +251,23 @@
             <li>Distortion correction to reveal solar features</li>
           </ul>
         </div>
+        <div class="demo">
+          <img src="img/datacube.webp" alt="Data cube slice at a wavelength of 656.59 nm, plotted as frame against pixel position, with a colour scale from 0.2 to 1.3" width="413" height="435" loading="lazy">
+          <div class="sub">
+            <h4>Data cube at 656.59 nm</h4>
+            <p>One wavelength slice of the spectrograph's data cube, shown as frame against pixel position.</p>
+          </div>
+        </div>
+        <details class="more">
+          <summary>More photos</summary>
+        <div class="demo">
+          <img src="img/uv-board.webp" alt="Blue FPGA development board with jumper wires on a desk" width="720" height="960" loading="lazy">
+          <div class="sub">
+            <h4>Spectrograph electronics</h4>
+            <p>The control board used with the UV-to-visible spectrograph, on the bench.</p>
+          </div>
+        </div>
+        </details>
       </article>
 
       <article class="card wide">
@@ -217,13 +279,31 @@
         <div class="auto">
           <figure><div class="pic"><img src="img/hana-station.webp" alt="Pie chart of station run, idle and setup time" loading="lazy"></div>
             <figcaption><b>Weekly test-station update</b><span>Station utilisation sent to the team automatically through LINE Notify.</span></figcaption></figure>
-          <figure><div class="pic"><img src="img/hana-instrument.webp" alt="Diagram: instruments to program to database and e-mail" loading="lazy"></div>
+          <figure><div class="pic"><svg class="dg" viewBox="0 0 280 210" role="img" aria-label="Diagram: three instruments feed a program through PyVISA, which writes to a database and sends an e-mail alert">
+  <g class="dg-ln"><path d="M74 48C98 48 102 90 118 92"/><path d="M74 94L118 100"/><path d="M74 140C98 140 102 110 118 108"/><path d="M190 100H219"/><path class="two" d="M155 118V137"/></g>
+  <rect x="10" y="34" width="60" height="28" rx="3" fill="#fff" stroke="#c9cdd1" stroke-width="1"/><image href="img/hana-inst-1.webp" x="12" y="36" width="56" height="24" preserveAspectRatio="xMidYMid meet"/><rect x="10" y="74" width="60" height="40" rx="3" fill="#fff" stroke="#c9cdd1" stroke-width="1"/><image href="img/hana-inst-2.webp" x="12" y="76" width="56" height="36" preserveAspectRatio="xMidYMid meet"/><rect x="10" y="122" width="60" height="31" rx="3" fill="#fff" stroke="#c9cdd1" stroke-width="1"/><image href="img/hana-inst-3.webp" x="12" y="124" width="56" height="27" preserveAspectRatio="xMidYMid meet"/>
+  <text class="dg-t" x="40" y="172" text-anchor="middle">Instruments</text>
+  <rect x="120" y="82" width="70" height="36" rx="6" fill="#222831"/><circle cx="129" cy="91" r="2.4" fill="#00adb5"/><text class="dg-t on" x="155.0" y="99.0" text-anchor="middle">Program</text><text class="dg-m on" x="155.0" y="111.0" text-anchor="middle">PyVISA</text>
+  <use href="#dg-mail" x="224" y="86" width="40" height="28"/><text class="dg-t" x="244" y="132" text-anchor="middle">E-mail alert</text>
+  <use href="#dg-db" x="139" y="140" width="32" height="38"/><text class="dg-t" x="180" y="163">Database</text>
+</svg></div>
             <figcaption><b>Where is my instrument?</b><span>Polls test instruments, logs them to a database and sends e-mail alerts.</span></figcaption></figure>
-          <figure><div class="pic"><img src="img/hana-wip.webp" alt="Diagram: Orion server to program to Excel" loading="lazy"></div>
+          <figure><div class="pic"><svg class="dg" viewBox="0 0 280 210" role="img" aria-label="Diagram: a program exchanges data with the Orion server and writes the result to Excel">
+  <g class="dg-ln"><path class="two" d="M62 100H102"/><path d="M178 100H218"/></g>
+  <use href="#dg-db" x="24" y="80" width="34" height="40"/><text class="dg-t" x="41" y="140" text-anchor="middle">Orion server</text>
+  <rect x="102" y="82" width="76" height="36" rx="6" fill="#222831"/><circle cx="111" cy="91" r="2.4" fill="#00adb5"/><text class="dg-t on" x="140.0" y="99.0" text-anchor="middle">Program</text><text class="dg-m on" x="140.0" y="111.0" text-anchor="middle">PyVISA</text>
+  <use href="#dg-sheet" x="222" y="80" width="34" height="40"/><text class="dg-t" x="239" y="140" text-anchor="middle">Excel</text>
+</svg></div>
             <figcaption><b>Orion automatic WIP</b><span>Work-in-progress data pulled from the Orion server into Excel.</span></figcaption></figure>
-          <figure><div class="pic"><img src="img/hana-spurious.webp" alt="Diagram: program controlling a spectrum analyser through PyVISA" loading="lazy"></div>
+          <figure><div class="pic"><svg class="dg" viewBox="0 0 280 210" role="img" aria-label="Diagram: a program controls a spectrum analyser through PyVISA">
+  <g class="dg-ln"><path class="two" d="M94 100H140"/></g>
+  <rect x="18" y="82" width="76" height="36" rx="6" fill="#222831"/><circle cx="27" cy="91" r="2.4" fill="#00adb5"/><text class="dg-t on" x="56.0" y="99.0" text-anchor="middle">Program</text><text class="dg-m on" x="56.0" y="111.0" text-anchor="middle">PyVISA</text>
+  <rect x="144" y="68" width="126" height="59" rx="3" fill="#fff" stroke="#c9cdd1" stroke-width="1"/><image href="img/hana-pxa.webp" x="146" y="70" width="122" height="55" preserveAspectRatio="xMidYMid meet"/><text class="dg-t" x="207" y="148" text-anchor="middle">Spectrum analyser</text>
+</svg></div>
             <figcaption><b>Semi-automatic spurious test</b><span>A manual spectrum-analyser test converted to Python and PyVISA.</span></figcaption></figure>
         </div>
+        <details class="more">
+          <summary>Demo videos</summary>
         <div class="demo">
           <video src="video/line-notify.mp4" poster="img/line-notify.webp" controls muted playsinline preload="none" aria-label="Phone recording of the weekly station update arriving in LINE"></video>
           <div class="sub">
@@ -231,6 +311,11 @@
             <p>Station status and equipment summaries are generated and pushed each week, so nobody compiles the report by hand.</p>
           </div>
         </div>
+        <div class="clips">
+          <figure><video src="video/auto-vi-test-motherboard.mp4" poster="img/poster-auto-vi-test-motherboard.webp" controls muted playsinline preload="none" aria-label="Auto VI and motherboard test fixture in operation"></video><figcaption>Auto VI and test motherboard</figcaption></figure>
+          <figure><video src="video/signal-tx-rx.mp4" poster="img/poster-signal-tx-rx.webp" controls muted playsinline preload="none" aria-label="Signal TX and RX test screen recording"></video><figcaption>Signal TX / RX</figcaption></figure>
+        </div>
+        </details>
       </article>
 
       <article class="card">
@@ -279,11 +364,11 @@
 <section id="experience" class="section dark notch-top notch-bottom">
   <div class="wrap">
     <div class="statement-head">
-      <h2>Where I've worked</h2>
+      <h2>Experience</h2>
     </div>
     <ol class="timeline">
       <li>
-        <div class="when"><span class="logo-tile"><img src="img/airgradient-logo.svg" alt="AirGradient logo" loading="lazy"></span><b>Nov 2026 – Present</b><span id="agTenure">AirGradient</span></div>
+        <div class="when"><span class="logo-tile"><img src="img/airgradient-logo.svg" alt="AirGradient logo" loading="lazy"></span><b id="agDates">Starts Nov 2026</b><span id="agTenure">AirGradient</span></div>
         <div class="what">
           <h3>Embedded Firmware Engineer</h3>
           <div class="org">AirGradient</div>
@@ -325,7 +410,7 @@
 <section id="research" class="section light">
   <div class="wrap">
     <div class="statement-head">
-      <h2>Publications</h2>
+      <h2>Research</h2>
       <p>Co-author on five papers from my work at NARIT.</p>
     </div>
     <ol class="pubs">
@@ -341,7 +426,7 @@
 <section id="education" class="section light">
   <div class="wrap">
     <div class="statement-head">
-      <h2>Study</h2>
+      <h2>Education</h2>
     </div>
     <div class="edu">
       <article class="card">
@@ -380,11 +465,19 @@
       </article>
     </div>
     <div class="photos">
-      <figure><img src="img/act-5g.webp" alt="True 5G Robotic Bootcamp team" loading="lazy"><figcaption>True 5G Robotic Bootcamp</figcaption></figure>
-      <figure><img src="img/act-design.webp" alt="Digital Design Camp award" loading="lazy"><figcaption>Digital Design Camp</figcaption></figure>
-      <figure><img src="img/act-scholar.webp" alt="Receiving the engineering scholarship" loading="lazy"><figcaption>Engineering scholarship</figcaption></figure>
-      <figure><img src="img/act-umich.webp" alt="Community service project with the University of Michigan" loading="lazy"><figcaption>Service with U. of Michigan</figcaption></figure>
+      <figure class="ph-b"><img src="img/act-5g.webp" alt="True 5G Robotic Bootcamp team" width="1200" height="900" loading="lazy"><figcaption>True 5G Robotic Bootcamp</figcaption></figure>
+      <figure class="ph-b"><img src="img/act-design.webp" alt="Digital Design Camp award" width="514" height="465" loading="lazy"><figcaption>Digital Design Camp</figcaption></figure>
+      <figure class="ph-b"><img src="img/act-scholar.webp" alt="Receiving the engineering scholarship" width="900" height="600" loading="lazy"><figcaption>Engineering scholarship</figcaption></figure>
     </div>
+    <details class="more more-gallery">
+      <summary>More photos (4)</summary>
+      <div class="photos">
+      <figure class="ph-a"><img src="img/act-umich.webp" alt="Community service project with the University of Michigan" width="1200" height="763" loading="lazy"><figcaption>Service with U. of Michigan</figcaption></figure>
+      <figure class="ph-a"><img src="img/act-bachelor.webp" alt="Receiving an academic achievement award at the Faculty of Engineering, Chiang Mai University" width="1200" height="800" loading="lazy"><figcaption>Academic achievement award, Faculty of Engineering</figcaption></figure>
+      <figure class="ph-a"><img src="img/act-ntecamp.webp" alt="Two students building a small circuit in a computer lab at NECTEC e-Camp, Chiang Mai University" width="1200" height="800" loading="lazy" style="object-position: center 45%"><figcaption>NECTEC e-Camp CMU</figcaption></figure>
+      <figure class="ph-a"><img src="img/act-narit-ml.webp" alt="Receiving a workshop certificate in front of the NARIT backdrop" width="1000" height="1333" loading="lazy" style="object-position: center 38%"><figcaption>NARIT workshop: Learn Image-Processing</figcaption></figure>
+      </div>
+    </details>
   </div>
 </section>
 </main>
@@ -397,7 +490,7 @@
     </div>
     <div>
       <div class="addr">
-        <code id="email">cheer3142@gmail.com</code>
+        <a class="mail" id="email" href="mailto:cheer3142@gmail.com">cheer3142@gmail.com</a>
         <button class="btn btn-primary" id="copyBtn" type="button">Copy email <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
         <a class="btn btn-ghost" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
@@ -421,7 +514,7 @@
   function setMenu(open) { nav.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
   menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
   sheet.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
 
   // hero headline types in grapheme by grapheme; the last letter is the one cyan note
   try {
@@ -449,7 +542,44 @@
     Array.prototype.forEach.call(targets, function (el) { el.classList.add('settle'); io.observe(el); });
   }
 
-  // experience total: Hana + NARIT (41 months) plus AirGradient from Nov 2026, counted from today
+  // videos: on wide screens they play while on screen, one at a time; on phones, Save-Data and reduced motion they wait for a tap
+  (function () {
+    var vids = document.querySelectorAll('video'); if (!vids.length) return;
+    var saveData = navigator.connection && navigator.connection.saveData;
+    var auto = !reduce && !saveData && window.matchMedia('(min-width: 761px)').matches && 'IntersectionObserver' in window;
+    var current = null;
+    Array.prototype.forEach.call(vids, function (v) {
+      v.muted = true; v.loop = true;
+      v.addEventListener('play', function () { if (current && current !== v) current.pause(); current = v; });
+    });
+    if (!auto) return;
+    var vio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } else v.pause();
+      });
+    }, { threshold: 0.6 });
+    Array.prototype.forEach.call(vids, function (v) { vio.observe(v); });
+  })();
+
+  // current section in the nav
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var links = document.querySelectorAll('.nav-links a, .sheet a'), map = {};
+    Array.prototype.forEach.call(links, function (a) { var id = a.getAttribute('href').slice(1); (map[id] = map[id] || []).push(a); });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        Array.prototype.forEach.call(links, function (a) { a.removeAttribute('aria-current'); });
+        (map[id] || []).forEach(function (a) { a.setAttribute('aria-current', 'true'); });
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    ['cerosoft', 'work', 'experience', 'research', 'education'].forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
+  })();
+
+  // experience total: Hana + NARIT (41 months) plus AirGradient from Nov 2026, counted from today.
+  // Until the start date the page says "Starts Nov 2026" and the AirGradient marker is not live.
   (function () {
     var now = new Date(), ag = (now.getFullYear() - 2026) * 12 + (now.getMonth() - 10) + 1;
     if (ag < 1) return;
@@ -461,6 +591,9 @@
     }
     document.getElementById('expTotal').textContent = span(41 + ag);
     document.getElementById('agTenure').textContent = span(ag) + ' · AirGradient';
+    document.getElementById('agDates').textContent = 'Nov 2026 – Present';
+    document.getElementById('mkAg').classList.add('live');
+    document.getElementById('mkAgText').textContent = 'AirGradient · Firmware Engineer';
   })();
 
   // copy email

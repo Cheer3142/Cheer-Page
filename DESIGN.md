@@ -19,6 +19,7 @@ colors:
   on-dark: "#eceef0"
   on-dark-heading: "#f3f4f5"
   on-dark-muted: "#a9afb6"
+  chip-ink: "#cfd4d9"
 typography:
   display:
     fontFamily: "Inter, Noto Sans Thai, system-ui, sans-serif"
@@ -50,7 +51,7 @@ typography:
     lineHeight: 1.2
   label:
     fontFamily: "Geist Mono, ui-monospace, monospace"
-    fontSize: "0.72rem"
+    fontSize: "0.78rem"
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: "0.06em"
@@ -61,6 +62,7 @@ rounded:
   well: "10px"
   capsule: "12px"
   card: "14px"
+  device-screen: "22px"
 spacing:
   gutter: "clamp(16px, 4vw, 48px)"
   section: "clamp(96px, 11vw, 168px)"
@@ -160,7 +162,7 @@ A near-monochrome charcoal-and-fog system with one cool cyan voice. Values are C
 | Figure (stats) | clamp(1.9–2.6rem) / 1.1, tabular | 400 | -0.035em |
 | Title (card, role) | 1.3rem / 1.3 | 500 | -0.015em |
 | Body | 1rem / 1.6 | 400 | 0 |
-| Label (Geist Mono, uppercase) | 0.72rem / 1.4 | 400 | 0.06em |
+| Label (Geist Mono, uppercase) | 0.78rem / 1.4 (never below 12px) | 400 | 0.06em |
 
 ### Named Rules
 **Light Statements.** Latin display and headline text is weight 400, never bold.
@@ -179,7 +181,7 @@ Depth comes from ground changes and cinematic light, not shadow stacks. Light ca
 
 ## Shapes
 
-Cards 14px; buttons 8px; chips, tabs and marker labels 6px; the nav capsule 12px; image wells 10px. Dark cards keep 14px on three corners and cut the top-right with a 26px diagonal clip. Section joins use a trapezoid notch: a centred tab `min(520px, 64%)` wide and 26px tall, in Fog, on the dark section's top or bottom edge.
+Cards 14px; buttons 8px; chips, tabs and marker labels 6px; the nav capsule 12px; image wells 10px; phone screenshots keep a 22px device-screen radius inside a 6px Device Black bezel. Dark cards keep 14px on three corners and cut the top-right with a 26px diagonal clip. Section joins use a trapezoid notch: a centred tab `min(520px, 64%)` wide and 26px tall, in Fog, on the dark section's top or bottom edge.
 
 ## Components
 
@@ -190,7 +192,7 @@ Cards 14px; buttons 8px; chips, tabs and marker labels 6px; the nav capsule 12px
 A capsule fixed 14px from the top, max 1080px, 52px tall, translucent graphite with a 16px blur; solid once the hero has scrolled away. Brand with a pulsing live dot on the left, links centred-right, a cyan "Get in touch" chip at the end. Below 860px a menu toggle opens a solid dark sheet; the last row is cyan.
 
 ### Markers (signature)
-A 6px mono-uppercase chip on a near-black fill with a cyan hairline and a dot. The first marker is live (pulsing cyan); the rest are static grey dots. They sit under the portrait and state current roles.
+A 6px mono-uppercase chip on a near-black fill with a cyan hairline and a dot. A marker is live (pulsing cyan) only when it is true today: CeroSoft now; AirGradient reads "From Nov 2026" with a grey dot until the start date, then flips to live by script. They sit under the portrait and state current roles.
 
 ### Dome (signature)
 A canvas wireframe sphere behind the hero portrait. Latitude and longitude lines in cool grey with depth-based alpha; it draws upward over 2.8s with a cyan leading ring, then turns slowly while a tilted cyan orbit carries one live marker. It pauses off-screen and shows one finished frame under reduced motion.
@@ -198,8 +200,14 @@ A canvas wireframe sphere behind the hero portrait. Latitude and longitude lines
 ### Timeline logo tiles
 Company logos sit on a 96×56 white tile (6px radius) above each date, so JPG and SVG logos with white backgrounds read on charcoal.
 
+### Disclosure ("More photos")
+Each project card shows one lead visual and the body; extra photos and video fold into a native `<details class="more">` row: a mono uppercase summary with a chevron, 56px tall, hairline above. Closed content loads nothing. The datacube figure stays visible because it is key evidence.
+
+### Skip link, nav state, links
+A cyan "Skip to content" chip appears on keyboard focus. The nav marks the current section with `aria-current` (a 8% white wash). The nav holds four links plus the CTA; the mobile sheet holds all five sections. The email is a real `mailto:` link in a hairline box. Tap targets are at least 44px on phones.
+
 ### Motion
-Expo-out (`cubic-bezier(.16, 1, .3, 1)`) for everything. The hero name types in at 45ms per grapheme, then copy rises 24px in sequence. Cards settle 28px upward on entry and are never hidden. Reduced motion shows every finished state.
+Expo-out (`cubic-bezier(.16, 1, .3, 1)`) for everything. The hero name types in at 45ms per grapheme, then copy rises 24px in sequence. Cards settle 28px upward on entry and are never hidden. Videos play only on wide screens, one at a time, while on screen; on phones, Save-Data and reduced motion they wait for a tap, and every clip has a poster. Reduced motion shows every finished state.
 
 ## Do's and Don'ts
 
