@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <title>Patcharadanai Sombatsatien · Embedded Firmware Engineer</title>
-<meta name="description" content="Portfolio of Patcharadanai Sombatsatien (Cheer): embedded firmware, computer vision and instrument control. Founder of CeroSoft.">
+<meta name="description" content="Portfolio of Patcharadanai Sombatsatien (Cheer): embedded firmware engineer at AirGradient (ESP32-C3, ESP-IDF), computer vision and instrument control. Founder of CeroSoft.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap">
@@ -38,28 +38,43 @@
 
 <header class="hero dark notch-bottom" id="top">
   <div class="hero-stage" aria-hidden="true"><canvas id="dome"></canvas></div>
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <h1 id="heroName" aria-label="Patcharadanai Sombatsatien"><span class="line" aria-hidden="true">Patcharadanai</span><span class="line" aria-hidden="true">Sombatsatien</span></h1>
-      <p class="nick rise" style="--d:1.15s">Cheer · 陈寅甲</p>
-      <p class="lede rise" style="--d:1.25s">I'm an embedded firmware engineer at AirGradient (from November 2026) and the founder of CeroSoft, where I build software that small businesses and condominiums run on. My background: computer vision research, telescope instrument control at NARIT and RF test automation at Hana.</p>
-      <div class="focus rise" style="--d:1.35s">
-        <span class="tag">Embedded firmware</span><span class="tag">Python · C++ · VHDL</span><span class="tag">Computer vision</span><span class="tag">Instrument control</span>
+  <!-- instrument readout along the top edge, as on a test bench display -->
+  <div class="wrap hero-meta rise" style="--d:.2s">
+    <p class="nick">Cheer · 陈寅甲</p>
+    <p class="clock">Thailand · GMT+7 · <time id="clock">--:--</time></p>
+    <p class="hud" aria-hidden="true"><span>Dome</span><span>AZ <b id="hudAz">090.0&deg;</b></span><span>EL <b id="hudEl">21.8&deg;</b></span></p>
+  </div>
+  <!-- the stage: one object at the centre, the nickname as a faint plate behind it -->
+  <div class="wrap hero-stage-row">
+    <p class="ghost" aria-hidden="true">Cheer</p>
+    <div class="hero-figure rise" style="--d:.5s">
+      <div class="frame">
+        <figure class="portrait card-dark"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="928" height="1120"></figure>
       </div>
-      <div class="cta rise" style="--d:1.45s">
+      <div class="callouts">
+        <ul class="markers">
+          <li class="marker" id="mkAg"><span class="live-dot" aria-hidden="true"></span><span id="mkAgText">AirGradient · From Nov 2026</span></li>
+          <li class="marker live"><span class="live-dot" aria-hidden="true"></span>CeroSoft · Founder</li>
+          <li class="marker"><span class="live-dot" aria-hidden="true"></span>Xi'an Jiaotong · M.Sc.</li>
+        </ul>
+        <p class="former">Former engineer · NARIT and Hana</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap hero-foot">
+    <div class="hero-title">
+      <h1 id="heroName" aria-label="Patcharadanai Sombatsatien"><span class="line" aria-hidden="true">Patcharadanai</span><span class="line" aria-hidden="true">Sombatsatien</span></h1>
+      <p class="lede rise" style="--d:1.15s"><strong>Embedded firmware engineer at AirGradient, and the founder of CeroSoft.</strong> I ported AirGradient's ESP32-C3 air-quality monitor firmware to ESP-IDF 5.5 and brought the image from 134% to 94.7% of its OTA slot. At CeroSoft I build software that small businesses and condominiums run on. Before that: computer vision research, telescope instrument control at NARIT and RF test automation at Hana.</p>
+    </div>
+    <div class="hero-actions">
+      <div class="focus rise" style="--d:1.3s">
+        <span class="tag">ESP32 · ESP-IDF</span><span class="tag">Python · C++ · VHDL</span><span class="tag">Computer vision</span><span class="tag">Instrument control</span>
+      </div>
+      <div class="cta rise" style="--d:1.4s">
         <a class="btn btn-primary" href="#contact">Get in touch <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
         <a class="btn btn-ghost" href="https://github.com/Cheer3142" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
         <a class="btn btn-ghost" href="files/Patcharadanai-Sombatsatien-CV.pdf" download>CV (PDF) <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7.5l4 4 4-4M3 14h10"/></svg></a>
       </div>
-    </div>
-    <div class="hero-figure rise" style="--d:.5s">
-      <figure class="portrait card-dark"><img src="img/portrait.webp" alt="Portrait of Patcharadanai Sombatsatien" width="928" height="1120"></figure>
-      <ul class="markers">
-        <li class="marker" id="mkAg"><span class="live-dot" aria-hidden="true"></span><span id="mkAgText">AirGradient · From Nov 2026</span></li>
-        <li class="marker live"><span class="live-dot" aria-hidden="true"></span>CeroSoft · Founder</li>
-        <li class="marker"><span class="live-dot" aria-hidden="true"></span>Xi'an Jiaotong · M.Sc.</li>
-      </ul>
-      <p class="former">Former engineer · NARIT and Hana</p>
     </div>
   </div>
   <div class="wrap">
@@ -370,8 +385,15 @@
         <div class="what">
           <h3>Embedded Firmware Engineer</h3>
           <div class="org">AirGradient</div>
-          <p>Firmware for air-quality monitoring hardware.</p>
-          <div class="focus"><span class="tag">Embedded firmware</span><span class="tag">Air-quality sensing</span></div>
+          <p>Firmware for the AirGradient ONE and Open Air air-quality monitors (ESP32-C3). Ported production firmware to ESP-IDF 5.5 / Arduino 3.x, cut the image from 134% to 94.7% of the OTA slot, fixed field bugs and validated on real boards.</p>
+          <ul class="role">
+            <li>Ported from PlatformIO espressif32 6.9.0 (arduino-esp32 2.0 / ESP-IDF 4.4) to 8.0.0 (arduino-esp32 3.3 / ESP-IDF 5.5), fixing every API break and runtime regression; the fixes were merged upstream in the firmware and the airgradient-client library.</li>
+            <li>Brought the image from 134% to 94.7% of the OTA app slot: restored the optimisation flag the new toolchain had dropped, removed iostream bloat, and added a build check that fails when the image doesn't fit.</li>
+            <li>Fixed an all-zero device ID (the MAC was read before WiFi started) and a frozen display with missed button presses (USB-serial writes blocked the main loop).</li>
+            <li>Tested on hardware: boot and sensors, cloud upload, MQTT, factory reset with the setup portal, serial commands and OTA bootloader compatibility, with a repeatable workflow and published masked evidence logs.</li>
+            <li>Built Python tooling for flashing, serial capture, LAN discovery, image-size breakdown and linker analysis, and drafted a phased plan to move from Arduino to native ESP-IDF.</li>
+          </ul>
+          <div class="focus"><span class="tag">ESP32-C3</span><span class="tag">ESP-IDF · Arduino</span><span class="tag">Hardware testing</span><span class="tag">Python tooling</span></div>
         </div>
       </li>
       <li>
@@ -479,7 +501,7 @@
   <div class="wrap contact-grid">
     <div>
       <h2>Let's tal<span class="last">k</span></h2>
-      <p>I'm an embedded firmware engineer at AirGradient from November 2026 and I build software at CeroSoft. Happy to talk about firmware, computer vision and instrument control, or to walk through any of these projects in detail.</p>
+      <p>I'm an embedded firmware engineer at AirGradient and I build software at CeroSoft. Happy to talk about firmware, computer vision and instrument control, or to walk through any of these projects in detail.</p>
     </div>
     <div>
       <div class="addr">
@@ -519,16 +541,28 @@
       var parts = seg ? Array.from(seg.segment(txt), function (x) { return x.segment; }) : Array.from(txt);
       parts.forEach(function (g, i) {
         var sp = document.createElement('span'); sp.textContent = g;
-        if (!reduce) sp.style.opacity = 0;
-        if (li === lines.length - 1 && i === parts.length - 1) sp.className = 'last';
+        sp.className = 'ch' + (li === lines.length - 1 && i === parts.length - 1 ? ' last' : '');
+        sp.style.setProperty('--cd', (0.15 + (li * 0.2) + i * 0.035).toFixed(3) + 's');
         line.appendChild(sp); all.push(sp);
       });
     });
-    if (!reduce) all.forEach(function (sp, i) { setTimeout(function () { sp.style.opacity = 1; }, 250 + i * 45); });
-  } catch (e) {}
+    if (!reduce) {
+      h.classList.add('pre');
+      requestAnimationFrame(function () { requestAnimationFrame(function () { h.classList.remove('pre'); }); });
+    }
+  } catch (e) { var hh = document.getElementById('heroName'); if (hh) hh.classList.remove('pre'); }
+
+  // local time in Thailand for the hero readout
+  (function () {
+    var el = document.getElementById('clock'); if (!el) return;
+    var fmt;
+    try { fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Bangkok', hour: '2-digit', minute: '2-digit', hour12: false }); } catch (e) { return; }
+    function tick() { var d = new Date(); el.textContent = fmt.format(d); el.setAttribute('datetime', d.toISOString()); }
+    tick(); setInterval(tick, 15000);
+  })();
 
   // cards settle into place as they enter; they are never hidden
-  var targets = document.querySelectorAll('.statement-head, .venture, .feature, .card, .timeline li, .pubs li, .photos figure, .contact-grid > div');
+  var targets = document.querySelectorAll('.statement-head, .venture, .feature, .card, .timeline > li, .pubs li, .photos figure, .contact-grid > div');
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
@@ -614,17 +648,27 @@
       var y2 = y * Math.cos(tilt) - z1 * Math.sin(tilt), z2 = y * Math.sin(tilt) + z1 * Math.cos(tilt);
       return { x: x1, y: y2, z: z2 };
     }
+    var stage = cv.parentNode, fig = document.querySelector('.frame'), hudAz = document.getElementById('hudAz'), hudEl = document.getElementById('hudEl');
+    var CX = 0, CY = 0, FR = 0, px = 0, py = 0, tx = 0, ty = 0, hudT = 0;
+    // centre the dome on the portrait (layout offsets, so the entrance animation does not skew it)
+    function place() {
+      var x = 0, y = 0, el = fig, w = fig.offsetWidth, h = fig.offsetHeight;
+      while (el && el !== stage.offsetParent) { x += el.offsetLeft; y += el.offsetTop; el = el.offsetParent; }
+      CX = x + w / 2; CY = y + h / 2; FR = h;
+    }
     function resize() {
       var dpr = Math.min(window.devicePixelRatio || 1, 2);
       W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (fig) place();
       frame(performance.now());
     }
     function frame(now) {
       var t = reduce ? 6000 : now - start;
       ctx.clearRect(0, 0, W, H);
-      var R = Math.min(W * 0.4, H * 0.38), cx = W * (W > 700 ? 0.56 : 0.5), cy = H * 0.5;
+      px += (tx - px) * 0.05; py += (ty - py) * 0.05;
+      var R = Math.min(FR * 0.98, W * 0.44), cx = CX, cy = CY;
       var p = Math.min(1, t / 2800), thr = -60 + 145 * ease(p);
-      var ry = 0.9 + (reduce ? 0 : t * 0.00007), tilt = -0.38;
+      var ry = 0.9 + (reduce ? 0 : t * 0.00007) + px * 0.7, tilt = -0.38 + py * 0.22;
       function map(q) { var s = 1 / (1 - q.z * 0.16); return { x: cx + R * q.x * s, y: cy - R * q.y * s, z: q.z }; }
       function seg(a, b, rgb, alphaMul) {
         var z = (a.z + b.z) / 2, al = (0.07 + 0.3 * Math.pow((z + 1) / 2, 1.5)) * alphaMul;
@@ -652,6 +696,27 @@
       }
       var fade = Math.min(1, Math.max(0, (t - 2800) / 900));
       if (fade > 0) {
+        // azimuth scale: graduated every 5 degrees on the dome's equator, numbered every 30
+        ctx.font = '400 10px "Geist Mono", ui-monospace, monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        for (var d = 0; d < 360; d += 5) {
+          var big = d % 30 === 0, a0 = pt(0, d * D, ry, tilt, 1.02), a1 = pt(0, d * D, ry, tilt, big ? 1.1 : 1.06);
+          var m0 = map(a0), m1 = map(a1);
+          seg(m0, m1, '230,232,234', (big ? 2.2 : 1.2) * fade);
+          if (big && a1.z > 0.05) {
+            var lb = map(pt(0, d * D, ry, tilt, 1.19));
+            ctx.fillStyle = 'rgba(169,175,182,' + (0.75 * fade * Math.min(1, a1.z * 1.6)).toFixed(2) + ')';
+            ctx.fillText(String(d), lb.x, lb.y);
+          }
+        }
+        var lu = map(pt(0, Math.PI / 2 + ry, ry, tilt, 1.12));
+        ctx.fillStyle = 'rgba(0,173,181,' + fade.toFixed(2) + ')';
+        ctx.beginPath(); ctx.moveTo(lu.x, lu.y + 2); ctx.lineTo(lu.x - 5, lu.y + 11); ctx.lineTo(lu.x + 5, lu.y + 11); ctx.closePath(); ctx.fill();
+        if (hudAz && now - hudT > 120) {
+          hudT = now;
+          var az = ((90 + ry / D) % 360 + 360) % 360, el = -tilt / D;
+          hudAz.textContent = ('00' + az.toFixed(1)).slice(-5) + '°'; hudEl.textContent = el.toFixed(1) + '°';
+        }
+        ctx.lineWidth = 1;
         var rp = null, rt = 0.55;
         for (var a = 0; a <= 360; a += 5) {
           var rq = map(pt(0, a * D, 0.3, rt, 1.32));
@@ -667,6 +732,16 @@
     function loop(now) { frame(now); raf = visible && !document.hidden ? requestAnimationFrame(loop) : 0; }
     function kick() { if (!raf && !reduce) raf = requestAnimationFrame(loop); }
     window.addEventListener('resize', resize);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(resize);
+    // the dome leans toward the pointer while it is over the hero
+    if (!reduce && window.matchMedia('(hover: hover)').matches) {
+      var heroEl = document.getElementById('top');
+      heroEl.addEventListener('pointermove', function (e) {
+        var r = heroEl.getBoundingClientRect();
+        tx = ((e.clientX - r.left) / r.width - 0.5) * 2; ty = ((e.clientY - r.top) / r.height - 0.5) * 2; kick();
+      });
+      heroEl.addEventListener('pointerleave', function () { tx = 0; ty = 0; });
+    }
     document.addEventListener('visibilitychange', kick);
     if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; kick(); }).observe(cv);
     resize(); kick();
